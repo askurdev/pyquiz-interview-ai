@@ -1,0 +1,962 @@
+[
+    {
+        "id": "lists_0",
+        "question": "Which of the following is the correct way to create an empty list in Python?",
+        "options": [
+            "A) my_list = {}",
+            "B) my_list = []",
+            "C) my_list = ()",
+            "D) my_list = list.new()"
+        ],
+        "correct_answer": "B) my_list = []",
+        "explanation": "Square brackets `[]` are the most common and concise way to define an empty list in Python. `list()` is also a valid way."
+    },
+    {
+        "id": "lists_1",
+        "question": "What characteristic best describes Python lists?",
+        "options": [
+            "A) Immutable and ordered",
+            "B) Mutable and unordered",
+            "C) Immutable and unordered",
+            "D) Mutable and ordered"
+        ],
+        "correct_answer": "D) Mutable and ordered",
+        "explanation": "Lists can be changed after creation (mutable) and maintain the order of elements (ordered)."
+    },
+    {
+        "id": "lists_2",
+        "question": "Which statement about Python lists is true?",
+        "options": [
+            "A) All elements in a list must be of the same data type.",
+            "B) Lists can only store numbers and strings.",
+            "C) Lists can contain elements of different data types.",
+            "D) Lists are primarily used for storing key-value pairs."
+        ],
+        "correct_answer": "C) Lists can contain elements of different data types.",
+        "explanation": "Python lists are heterogeneous, meaning they can store elements of different data types (e.g., integers, strings, other lists) within the same list."
+    },
+    {
+        "id": "lists_3",
+        "question": "Given `my_list = [10, 20, 30, 40]`, what is `my_list[2]`?",
+        "options": [
+            "A) 10",
+            "B) 20",
+            "C) 30",
+            "D) 40"
+        ],
+        "correct_answer": "C) 30",
+        "explanation": "List indexing starts from 0. So, `my_list[0]` is 10, `my_list[1]` is 20, and `my_list[2]` is 30."
+    },
+    {
+        "id": "lists_4",
+        "question": "Given `my_list = ['a', 'b', 'c', 'd']`, what is `my_list[-1]`?",
+        "options": [
+            "A) 'a'",
+            "B) 'b'",
+            "C) 'c'",
+            "D) 'd'"
+        ],
+        "correct_answer": "D) 'd'",
+        "explanation": "Negative indexing starts from -1, representing the last element. So, `my_list[-1]` is 'd', `my_list[-2]` is 'c', and so on."
+    },
+    {
+        "id": "lists_5",
+        "question": "What happens if you try to access an index that is out of range in a Python list?",
+        "options": [
+            "A) The list automatically resizes.",
+            "B) A `KeyError` is raised.",
+            "C) An `IndexError` is raised.",
+            "D) The program returns `None`."
+        ],
+        "correct_answer": "C) An `IndexError` is raised.",
+        "explanation": "Attempting to access an index that does not exist in a list (either too large positive or too small negative) will result in an `IndexError`."
+    },
+    {
+        "id": "lists_6",
+        "question": "Given `data = [1, 2, 3, 4, 5, 6]`, what is the result of `data[1:4]`?",
+        "options": [
+            "A) [1, 2, 3]",
+            "B) [2, 3, 4]",
+            "C) [2, 3, 4, 5]",
+            "D) [1, 2, 3, 4]"
+        ],
+        "correct_answer": "B) [2, 3, 4]",
+        "explanation": "Slicing `[start:end]` includes elements from `start` up to (but not including) `end`. So, elements at index 1, 2, and 3 are included."
+    },
+    {
+        "id": "lists_7",
+        "question": "Given `letters = ['a', 'b', 'c', 'd', 'e']`, what is `letters[2:]`?",
+        "options": [
+            "A) ['a', 'b']",
+            "B) ['c', 'd', 'e']",
+            "C) ['d', 'e']",
+            "D) ['a', 'b', 'c']"
+        ],
+        "correct_answer": "B) ['c', 'd', 'e']",
+        "explanation": "When the end index is omitted in a slice, it defaults to the end of the list. So, `letters[2:]` includes elements from index 2 to the end."
+    },
+    {
+        "id": "lists_8",
+        "question": "Given `nums = [1, 2, 3, 4, 5, 6, 7, 8]`, what is `nums[::2]`?",
+        "options": [
+            "A) [1, 3, 5, 7]",
+            "B) [2, 4, 6, 8]",
+            "C) [1, 2, 3, 4]",
+            "D) [5, 6, 7, 8]"
+        ],
+        "correct_answer": "A) [1, 3, 5, 7]",
+        "explanation": "The slice `[::2]` means start from the beginning, go to the end, with a step of 2. This selects every second element starting from the first element."
+    },
+    {
+        "id": "lists_9",
+        "question": "Given `word = ['P', 'Y', 'T', 'H', 'O', 'N']`, what does `word[::-1]` produce?",
+        "options": [
+            "A) ['P', 'Y', 'T', 'H', 'O', 'N']",
+            "B) ['N', 'O', 'H', 'T', 'Y', 'P']",
+            "C) ['N', 'H', 'Y']",
+            "D) ['P', 'T', 'O']"
+        ],
+        "correct_answer": "B) ['N', 'O', 'H', 'T', 'Y', 'P']",
+        "explanation": "A slice with a step of -1 reverses the list."
+    },
+    {
+        "id": "lists_10",
+        "question": "What is the output of the following code?`my_list = [1, 2]my_list.append([3, 4])print(my_list)`",
+        "options": [
+            "A) [1, 2, 3, 4]",
+            "B) [1, 2, [3, 4]]",
+            "C) [1, 2, 3], [4]",
+            "D) [[1, 2], [3, 4]]"
+        ],
+        "correct_answer": "B) [1, 2, [3, 4]]",
+        "explanation": "The `append()` method adds its argument as a single element to the end of the list, even if the argument is another list, making it a nested list."
+    },
+    {
+        "id": "lists_11",
+        "question": "What is the output of the following code?`list1 = [1, 2]list2 = [3, 4]list1.extend(list2)print(list1)`",
+        "options": [
+            "A) [1, 2, [3, 4]]",
+            "B) [1, 2, 3, 4]",
+            "C) [[1, 2], [3, 4]]",
+            "D) [1, 3, 2, 4]"
+        ],
+        "correct_answer": "B) [1, 2, 3, 4]",
+        "explanation": "The `extend()` method adds all the elements of an iterable (like another list) to the end of the current list, effectively merging them."
+    },
+    {
+        "id": "lists_12",
+        "question": "Given `data = ['a', 'b', 'd']`, what will `data.insert(2, 'c')` result in for `data`?",
+        "options": [
+            "A) ['a', 'b', 'd', 'c']",
+            "B) ['a', 'b', 'c', 'd']",
+            "C) ['a', 'c', 'b', 'd']",
+            "D) ['c', 'a', 'b', 'd']"
+        ],
+        "correct_answer": "B) ['a', 'b', 'c', 'd']",
+        "explanation": "The `insert(index, element)` method inserts an element at a specified index, shifting subsequent elements to the right. Index 2 is between 'b' (index 1) and 'd' (index 2 before insert)."
+    },
+    {
+        "id": "lists_13",
+        "question": "Which list method removes the first occurrence of a specified value?",
+        "options": [
+            "A) `pop()`",
+            "B) `delete()`",
+            "C) `remove()`",
+            "D) `clear()`"
+        ],
+        "correct_answer": "C) `remove()`",
+        "explanation": "The `remove(value)` method searches for the first occurrence of the specified value and removes it. `pop(index)` removes an element by index."
+    },
+    {
+        "id": "lists_14",
+        "question": "Given `numbers = [10, 20, 30, 40]`, what is the value of `x` after `x = numbers.pop(1)`?",
+        "options": [
+            "A) 10",
+            "B) 20",
+            "C) 30",
+            "D) 40"
+        ],
+        "correct_answer": "B) 20",
+        "explanation": "`pop(index)` removes and returns the element at the specified index. Here, index 1 corresponds to the value 20. The list `numbers` would then be `[10, 30, 40]`."
+    },
+    {
+        "id": "lists_15",
+        "question": "Given `items = [3, 1, 4, 1, 5, 9, 2]`, what is `items` after `items.sort()`?",
+        "options": [
+            "A) [9, 5, 4, 3, 2, 1, 1]",
+            "B) [1, 1, 2, 3, 4, 5, 9]",
+            "C) [3, 1, 4, 1, 5, 9, 2]",
+            "D) None"
+        ],
+        "correct_answer": "B) [1, 1, 2, 3, 4, 5, 9]",
+        "explanation": "The `sort()` method sorts the list in-place in ascending order. It modifies the original list and returns `None`."
+    },
+    {
+        "id": "lists_16",
+        "question": "What is the result of the following list comprehension?`[x * 2 for x in range(3)]`",
+        "options": [
+            "A) [0, 1, 2]",
+            "B) [0, 2, 4]",
+            "C) [1, 2, 3]",
+            "D) [2, 4, 6]"
+        ],
+        "correct_answer": "B) [0, 2, 4]",
+        "explanation": "`range(3)` generates numbers 0, 1, 2. Each number `x` is then multiplied by 2: `0*2=0`, `1*2=2`, `2*2=4`."
+    },
+    {
+        "id": "lists_17",
+        "question": "What is the result of the following list comprehension?`[x for x in [1, 2, 3, 4, 5] if x % 2 == 0]`",
+        "options": [
+            "A) [1, 3, 5]",
+            "B) [2, 4]",
+            "C) [1, 2, 3, 4, 5]",
+            "D) []"
+        ],
+        "correct_answer": "B) [2, 4]",
+        "explanation": "The comprehension iterates through the list. The `if x % 2 == 0` condition filters out only the even numbers (2 and 4)."
+    },
+    {
+        "id": "lists_18",
+        "question": "What is the result of the following list comprehension?`[s.upper() for s in ['apple', 'banana', 'cherry'] if len(s) > 5]`",
+        "options": [
+            "A) ['APPLE', 'BANANA', 'CHERRY']",
+            "B) ['BANANA', 'CHERRY']",
+            "C) ['APPLE', 'CHERRY']",
+            "D) ['apple', 'banana', 'cherry']"
+        ],
+        "correct_answer": "B) ['BANANA', 'CHERRY']",
+        "explanation": "The comprehension iterates through the list. 'apple' has length 5, so it's filtered out. 'banana' (length 6) and 'cherry' (length 6) are converted to uppercase and included."
+    },
+    {
+        "id": "lists_19",
+        "question": "What is the output of the following list comprehension?`squares = [i**2 for i in range(5)]`",
+        "options": [
+            "A) [0, 1, 2, 3, 4]",
+            "B) [1, 4, 9, 16, 25]",
+            "C) [0, 1, 4, 9, 16]",
+            "D) [2, 4, 6, 8, 10]"
+        ],
+        "correct_answer": "C) [0, 1, 4, 9, 16]",
+        "explanation": "`range(5)` generates numbers 0, 1, 2, 3, 4. Each number `i` is then squared (`i**2`). So, `0**2=0`, `1**2=1`, `2**2=4`, `3**2=9`, `4**2=16`."
+    },
+    {
+        "id": "lists_01",
+        "question": "Which of the following is the most common and concise way to create an empty list in Python?",
+        "options": [
+            "my_list = {}",
+            "my_list = []",
+            "my_list = ()",
+            "my_list = list()"
+        ],
+        "correct_answer": "my_list = []",
+        "explanation": "Square brackets `[]` are the most common and concise syntax for creating an empty list. `list()` also works but is less common for empty lists."
+    },
+    {
+        "id": "lists_02",
+        "question": "What is a key characteristic of Python lists regarding their content?",
+        "options": [
+            "They are immutable, meaning their elements cannot be changed after creation.",
+            "They can only store elements of the same data type.",
+            "They are mutable, allowing elements to be added, removed, or changed after creation.",
+            "They are primarily used for mathematical operations and cannot store strings."
+        ],
+        "correct_answer": "They are mutable, allowing elements to be added, removed, or changed after creation.",
+        "explanation": "Lists are mutable sequences, which means their elements can be modified, added, or removed after the list has been created."
+    },
+    {
+        "id": "lists_03",
+        "question": "Which statement about Python lists storing different data types is true?",
+        "options": [
+            "A Python list can only store elements of a single, consistent data type.",
+            "A Python list can store elements of different data types simultaneously.",
+            "A Python list can store different data types, but only if they are all numbers.",
+            "A Python list cannot store both strings and integers in the same list."
+        ],
+        "correct_answer": "A Python list can store elements of different data types simultaneously.",
+        "explanation": "Python lists are highly flexible and can store elements of various data types (integers, strings, floats, other lists, etc.) within the same list."
+    },
+    {
+        "id": "lists_04",
+        "question": "Given `my_list = [10, 20, 30, 40, 50]`, what is the output of `my_list[2]`?",
+        "options": [
+            "10",
+            "20",
+            "30",
+            "40"
+        ],
+        "correct_answer": "30",
+        "explanation": "List indexing starts from 0. So, `my_list[0]` is 10, `my_list[1]` is 20, and `my_list[2]` is 30."
+    },
+    {
+        "id": "lists_05",
+        "question": "Given `my_list = ['apple', 'banana', 'cherry', 'date']`, what is the output of `my_list[-1]`?",
+        "options": [
+            "'apple'",
+            "'banana'",
+            "'cherry'",
+            "'date'"
+        ],
+        "correct_answer": "'date'",
+        "explanation": "Negative indexing accesses elements from the end of the list. `my_list[-1]` refers to the last element, `my_list[-2]` to the second to last, and so on."
+    },
+    {
+        "id": "lists_06",
+        "question": "What happens if you try to access an index that is out of range for a Python list, e.g., `my_list = [1, 2, 3]` and you try `my_list[3]`?",
+        "options": [
+            "The program will print `None`.",
+            "The program will print an empty string.",
+            "A `KeyError` will be raised.",
+            "An `IndexError` will be raised."
+        ],
+        "correct_answer": "An `IndexError` will be raised.",
+        "explanation": "Accessing an index that does not exist in the list (either too high or too low for negative indices) will result in an `IndexError`."
+    },
+    {
+        "id": "lists_07",
+        "question": "Given `numbers = [1, 2, 3, 4, 5, 6, 7]`, what is the result of `numbers[1:4]`?",
+        "options": [
+            "[1, 2, 3]",
+            "[2, 3, 4]",
+            "[1, 2, 3, 4]",
+            "[2, 3, 4, 5]"
+        ],
+        "correct_answer": "[2, 3, 4]",
+        "explanation": "Slicing `[start:end]` includes elements from the `start` index up to (but not including) the `end` index. So, `numbers[1]` (2), `numbers[2]` (3), `numbers[3]` (4) are included."
+    },
+    {
+        "id": "lists_08",
+        "question": "Given `letters = ['a', 'b', 'c', 'd', 'e', 'f']`, what is the output of `letters[::2]`?",
+        "options": [
+            "['a', 'b', 'c']",
+            "['a', 'c', 'e']",
+            "['b', 'd', 'f']",
+            "['f', 'd', 'b']"
+        ],
+        "correct_answer": "['a', 'c', 'e']",
+        "explanation": "The slice `[::2]` means start from the beginning, go to the end, with a step of 2. It picks 'a', skips 'b', picks 'c', skips 'd', picks 'e'."
+    },
+    {
+        "id": "lists_09",
+        "question": "What does `my_list[:]` do when applied to a list `my_list = [10, 20, 30]`?",
+        "options": [
+            "It returns the first element of the list.",
+            "It returns the last element of the list.",
+            "It creates a shallow copy of the entire list.",
+            "It raises a `SyntaxError`."
+        ],
+        "correct_answer": "It creates a shallow copy of the entire list.",
+        "explanation": "The slice `[:]` is a common and efficient way to create a shallow copy of a list. It means 'from the beginning to the end, with a step of 1'."
+    },
+    {
+        "id": "lists_10",
+        "question": "Given `data = [1, 2, 3, 4, 5]`, what will `data` be after `data[1:3] = [8, 9, 10]`?",
+        "options": [
+            "[1, 8, 9, 10, 4, 5]",
+            "[1, 8, 9, 10, 5]",
+            "[1, 8, 9, 4, 5]",
+            "[1, 10, 4, 5]"
+        ],
+        "correct_answer": "[1, 8, 9, 10, 5]",
+        "explanation": "When you assign a new list to a slice, the elements in the slice are replaced by the new list. The length of the list can change. Elements at index 1 and 2 (`2`, `3`) are replaced by `8, 9, 10`."
+    },
+    {
+        "id": "lists_11",
+        "question": "What is the effect of `my_list.append(5)` if `my_list = [1, 2, 3]`?",
+        "options": [
+            "`my_list` becomes `[5, 1, 2, 3]`",
+            "`my_list` becomes `[1, 2, 3, 5]`",
+            "`my_list` becomes `[1, 2, 3, [5]]`",
+            "It raises an error because 5 is not a list."
+        ],
+        "correct_answer": "`my_list` becomes `[1, 2, 3, 5]`",
+        "explanation": "The `append()` method adds a single element to the end of the list, modifying the list in-place."
+    },
+    {
+        "id": "lists_12",
+        "question": "Given `chars = ['a', 'c', 'd']`, what is `chars` after `chars.insert(1, 'b')`?",
+        "options": [
+            "['a', 'c', 'b', 'd']",
+            "['a', 'b', 'c', 'd']",
+            "['b', 'a', 'c', 'd']",
+            "['a', 'c', 'd', 'b']"
+        ],
+        "correct_answer": "['a', 'b', 'c', 'd']",
+        "explanation": "The `insert(index, element)` method adds an element at the specified index, shifting subsequent elements to the right."
+    },
+    {
+        "id": "lists_13",
+        "question": "If `items = ['apple', 'banana', 'cherry', 'banana']`, what will `items` be after `items.remove('banana')`?",
+        "options": [
+            "['apple', 'cherry']",
+            "['apple', 'cherry', 'banana']",
+            "['apple', 'banana', 'cherry']",
+            "['apple', 'cherry', 'banana', 'banana']"
+        ],
+        "correct_answer": "['apple', 'cherry', 'banana']",
+        "explanation": "The `remove()` method removes the *first* occurrence of the specified value from the list. The second 'banana' remains."
+    },
+    {
+        "id": "lists_14",
+        "question": "Given `data = [10, 20, 30, 40]`, what is the value of `x` after `x = data.pop(1)` and what is `data` afterward?",
+        "options": [
+            "`x = 10`, `data = [20, 30, 40]`",
+            "`x = 20`, `data = [10, 30, 40]`",
+            "`x = 40`, `data = [10, 20, 30]`",
+            "`x = 30`, `data = [10, 20, 40]`"
+        ],
+        "correct_answer": "`x = 20`, `data = [10, 30, 40]`",
+        "explanation": "The `pop(index)` method removes and returns the element at the specified index. Here, it removes the element at index 1 (which is 20)."
+    },
+    {
+        "id": "lists_15",
+        "question": "What is the output of the following code snippet?\n`numbers = [3, 1, 4, 1, 5, 9]`\n`numbers.sort()`\n`print(numbers)`",
+        "options": [
+            "[3, 1, 4, 1, 5, 9]",
+            "[9, 5, 4, 3, 1, 1]",
+            "[1, 1, 3, 4, 5, 9]",
+            "None"
+        ],
+        "correct_answer": "[1, 1, 3, 4, 5, 9]",
+        "explanation": "The `sort()` method sorts the list in-place (modifies the original list) in ascending order by default. It returns `None`, but the `print()` statement shows the modified list."
+    },
+    {
+        "id": "lists_16",
+        "question": "Given `list1 = [1, 2]` and `list2 = [3, 4]`, what is `list1` after `list1.extend(list2)`?",
+        "options": [
+            "[1, 2, [3, 4]]",
+            "[1, 2, 3, 4]",
+            "[3, 4, 1, 2]",
+            "[1, 2]"
+        ],
+        "correct_answer": "[1, 2, 3, 4]",
+        "explanation": "The `extend()` method adds all the elements of an iterable (like another list) to the end of the current list, effectively concatenating them."
+    },
+    {
+        "id": "lists_17",
+        "question": "What is the output of `[x * 2 for x in range(3)]`?",
+        "options": [
+            "[0, 1, 2]",
+            "[0, 2, 4]",
+            "[1, 2, 3]",
+            "[2, 4, 6]"
+        ],
+        "correct_answer": "[0, 2, 4]",
+        "explanation": "`range(3)` generates numbers 0, 1, 2. Each number is then multiplied by 2: `0*2=0`, `1*2=2`, `2*2=4`."
+    },
+    {
+        "id": "lists_18",
+        "question": "What is the output of `[num for num in [1, 2, 3, 4, 5] if num % 2 == 0]`?",
+        "options": [
+            "[1, 3, 5]",
+            "[2, 4]",
+            "[1, 2, 3, 4, 5]",
+            "[True, False, True, False, True]"
+        ],
+        "correct_answer": "[2, 4]",
+        "explanation": "The list comprehension iterates through the numbers, and the `if num % 2 == 0` condition filters out only the even numbers, which are 2 and 4."
+    },
+    {
+        "id": "lists_19",
+        "question": "What is the result of `[s.upper() for s in ['hello', 'world']]`?",
+        "options": [
+            "['Hello', 'World']",
+            "['HELLO', 'WORLD']",
+            "['h', 'e', 'l', 'l', 'o', 'w', 'o', 'r', 'l', 'd']",
+            "['hello', 'world']"
+        ],
+        "correct_answer": "['HELLO', 'WORLD']",
+        "explanation": "The `upper()` string method converts all characters in a string to uppercase. The list comprehension applies this method to each string in the input list."
+    },
+    {
+        "id": "lists_20",
+        "question": "What is the output of `[x * y for x in [1, 2] for y in [10, 20]]`?",
+        "options": [
+            "[10, 20, 20, 40]",
+            "[10, 20, 10, 20]",
+            "[1, 2, 10, 20]",
+            "[10, 40]"
+        ],
+        "correct_answer": "[10, 20, 20, 40]",
+        "explanation": "This is a nested list comprehension. It iterates through `x` first, then `y` for each `x`: (1*10=10, 1*20=20), then (2*10=20, 2*20=40)."
+    },
+    {
+        "id": "lists_01",
+        "question": "Which of the following statements about Python lists is true?",
+        "options": [
+            "Lists are immutable.",
+            "Lists can only store elements of the same data type.",
+            "Lists are ordered collections of items.",
+            "Lists are defined using curly braces {}."
+        ],
+        "correct_answer": "Lists are ordered collections of items.",
+        "explanation": "Python lists are mutable, can store heterogeneous data types, are ordered (maintain insertion order), and are defined using square brackets []."
+    },
+    {
+        "id": "lists_02",
+        "question": "How do you create an empty list in Python?",
+        "options": [
+            "my_list = {}",
+            "my_list = ()",
+            "my_list = []",
+            "my_list = list(None)"
+        ],
+        "correct_answer": "my_list = []",
+        "explanation": "The most common and concise way to create an empty list is using square brackets `[]`. `list()` also works but `[]` is preferred."
+    },
+    {
+        "id": "lists_03",
+        "question": "Given my_list = [10, 20, 30, 40], what is the output of my_list[2]?",
+        "options": [
+            "10",
+            "20",
+            "30",
+            "40"
+        ],
+        "correct_answer": "30",
+        "explanation": "List indexing starts from 0. The element at index 2 is the third item in the list, which is 30."
+    },
+    {
+        "id": "lists_04",
+        "question": "Given data = ['a', 'b', 'c', 'd'], what is the output of data[-1]?",
+        "options": [
+            "'a'",
+            "'b'",
+            "'c'",
+            "'d'"
+        ],
+        "correct_answer": "'d'",
+        "explanation": "Negative indexing accesses elements from the end of the list. -1 refers to the last element, -2 to the second to last, and so on."
+    },
+    {
+        "id": "lists_05",
+        "question": "After executing numbers = [1, 2, 3, 4]; numbers[1] = 5, what will numbers be?",
+        "options": [
+            "[1, 2, 3, 4]",
+            "[1, 5, 3, 4]",
+            "[5, 2, 3, 4]",
+            "[1, 2, 5, 4]"
+        ],
+        "correct_answer": "[1, 5, 3, 4]",
+        "explanation": "Lists are mutable, meaning their elements can be changed after creation. Assigning a new value to an index modifies the list in-place."
+    },
+    {
+        "id": "lists_06",
+        "question": "Given letters = ['p', 'y', 't', 'h', 'o', 'n'], what is letters[1:4]?",
+        "options": [
+            "['p', 'y', 't']",
+            "['y', 't', 'h']",
+            "['y', 't', 'h', 'o']",
+            "['p', 'y', 't', 'h']"
+        ],
+        "correct_answer": "['y', 't', 'h']",
+        "explanation": "Slicing `[start:end]` includes elements from the `start` index up to, but not including, the `end` index. So, indices 1, 2, and 3 are included."
+    },
+    {
+        "id": "lists_07",
+        "question": "Given items = ['apple', 'banana', 'cherry', 'date'], what is items[2:]?",
+        "options": [
+            "['apple', 'banana']",
+            "['cherry', 'date']",
+            "['banana', 'cherry', 'date']",
+            "['apple', 'banana', 'cherry', 'date']"
+        ],
+        "correct_answer": "['cherry', 'date']",
+        "explanation": "When the end index is omitted in a slice `[start:]`, the slice includes all elements from the `start` index to the end of the list."
+    },
+    {
+        "id": "lists_08",
+        "question": "What will list(range(10))[::2] produce?",
+        "options": [
+            "[0, 1, 2, 3, 4, 5, 6, 7, 8, 9]",
+            "[0, 2, 4, 6, 8]",
+            "[1, 3, 5, 7, 9]",
+            "[9, 7, 5, 3, 1]"
+        ],
+        "correct_answer": "[0, 2, 4, 6, 8]",
+        "explanation": "The slice `[::2]` means start from the beginning, go to the end, and take every second element (step of 2)."
+    },
+    {
+        "id": "lists_09",
+        "question": "What does my_list.append(5) do if my_list = [1, 2, 3]?",
+        "options": [
+            "Inserts 5 at the beginning of the list.",
+            "Replaces the last element with 5.",
+            "Adds 5 to the end of the list.",
+            "Returns a new list [1, 2, 3, 5]."
+        ],
+        "correct_answer": "Adds 5 to the end of the list.",
+        "explanation": "The `append()` method adds a single element to the end of the list, modifying the list in-place."
+    },
+    {
+        "id": "lists_10",
+        "question": "Given L = ['a', 'b', 'd'], what is L after L.insert(2, 'c')?",
+        "options": [
+            "['a', 'b', 'd', 'c']",
+            "['a', 'c', 'b', 'd']",
+            "['a', 'b', 'c', 'd']",
+            "['c', 'a', 'b', 'd']"
+        ],
+        "correct_answer": "['a', 'b', 'c', 'd']",
+        "explanation": "The `insert(index, element)` method inserts an element at the specified index, shifting subsequent elements to the right."
+    },
+    {
+        "id": "lists_11",
+        "question": "If items = [10, 20, 30, 20], what is items after items.remove(20)?",
+        "options": [
+            "[10, 30, 20]",
+            "[10, 20, 30]",
+            "[10, 30]",
+            "[10, 20]"
+        ],
+        "correct_answer": "[10, 30, 20]",
+        "explanation": "The `remove()` method removes the first occurrence of the specified value from the list."
+    },
+    {
+        "id": "lists_12",
+        "question": "Given stack = [1, 2, 3], what is the value of stack.pop() and what is stack afterwards?",
+        "options": [
+            "Returns 1, stack is [2, 3]",
+            "Returns 3, stack is [1, 2]",
+            "Returns 3, stack is [1, 2, 3]",
+            "Returns 1, stack is [1, 2]"
+        ],
+        "correct_answer": "Returns 3, stack is [1, 2]",
+        "explanation": "The `pop()` method, when called without an argument, removes and returns the last item from the list."
+    },
+    {
+        "id": "lists_13",
+        "question": "What is the difference between list1.append(list2) and list1.extend(list2) when list1 = [1, 2] and list2 = [3, 4]?",
+        "options": [
+            "Both methods produce [1, 2, 3, 4].",
+            "append() results in [1, 2, [3, 4]], while extend() results in [1, 2, 3, 4].",
+            "append() results in [1, 2, 3, 4], while extend() results in [1, 2, [3, 4]].",
+            "Both methods result in [1, 2, [3, 4]]."
+        ],
+        "correct_answer": "append() results in [1, 2, [3, 4]], while extend() results in [1, 2, 3, 4].",
+        "explanation": "`append()` adds its argument as a single element to the end of the list. `extend()` iterates over its argument and adds each element to the list."
+    },
+    {
+        "id": "lists_14",
+        "question": "After data = [3, 1, 4, 1, 5, 9, 2]; data.sort(), what is data?",
+        "options": [
+            "[9, 5, 4, 3, 2, 1, 1]",
+            "[1, 1, 2, 3, 4, 5, 9]",
+            "[3, 1, 4, 1, 5, 9, 2]",
+            "None"
+        ],
+        "correct_answer": "[1, 1, 2, 3, 4, 5, 9]",
+        "explanation": "The `sort()` method sorts the list in-place (modifies the original list) in ascending order by default. It returns `None`."
+    },
+    {
+        "id": "lists_15",
+        "question": "What is the result of [x * 2 for x in range(3)]?",
+        "options": [
+            "[0, 1, 2]",
+            "[0, 2, 4]",
+            "[2, 4, 6]",
+            "[0, 1, 2, 3, 4, 5]"
+        ],
+        "correct_answer": "[0, 2, 4]",
+        "explanation": "`range(3)` generates 0, 1, 2. The list comprehension multiplies each of these by 2: (0*2=0, 1*2=2, 2*2=4)."
+    },
+    {
+        "id": "lists_16",
+        "question": "What is the output of [n for n in range(5) if n % 2 == 0]?",
+        "options": [
+            "[0, 1, 2, 3, 4]",
+            "[1, 3]",
+            "[0, 2, 4]",
+            "[]"
+        ],
+        "correct_answer": "[0, 2, 4]",
+        "explanation": "The list comprehension iterates through numbers from 0 to 4. The `if n % 2 == 0` condition filters for even numbers only."
+    },
+    {
+        "id": "lists_17",
+        "question": "What is the result of [(x, y) for x in [1, 2] for y in ['a', 'b']]?",
+        "options": [
+            "[(1, 'a'), (2, 'b')]",
+            "[(1, 'a'), (1, 'b'), (2, 'a'), (2, 'b')]",
+            "[['a', 'b'], ['a', 'b']]",
+            "[(1, 2), ('a', 'b')]"
+        ],
+        "correct_answer": "[(1, 'a'), (1, 'b'), (2, 'a'), (2, 'b')]",
+        "explanation": "This is a nested list comprehension. For each `x`, it iterates through all `y`, creating a tuple `(x, y)` for each combination."
+    },
+    {
+        "id": "lists_18",
+        "question": "Given my_list = ['a', 'b', 'a', 'c'], what is my_list.count('a') and my_list.index('b')?",
+        "options": [
+            "count is 1, index is 0",
+            "count is 2, index is 1",
+            "count is 2, index is 0",
+            "count is 1, index is 1"
+        ],
+        "correct_answer": "count is 2, index is 1",
+        "explanation": "`count('a')` returns 2 because 'a' appears twice. `index('b')` returns 1 because 'b' is first found at index 1."
+    },
+    {
+        "id": "lists_19",
+        "question": "If original = [1, 2, 3] and copy = original[:], which of the following is true?",
+        "options": [
+            "original and copy refer to the exact same list object.",
+            "Modifying copy will also modify original.",
+            "original and copy are two independent lists with the same elements.",
+            "copy will be [1, 2, 3, 1, 2, 3]."
+        ],
+        "correct_answer": "original and copy are two independent lists with the same elements.",
+        "explanation": "Slicing `[:]` creates a shallow copy of the list. This means a new list object is created, but its elements are the same as the original. They are independent lists."
+    },
+    {
+        "id": "lists_20",
+        "question": "Which operation on my_list = [1, 2, 3] changes the original list in-place?",
+        "options": [
+            "new_list = my_list + [4]",
+            "new_list = my_list * 2",
+            "my_list.append(4)",
+            "new_list = my_list[1:]"
+        ],
+        "correct_answer": "my_list.append(4)",
+        "explanation": "The `append()` method modifies the list directly (in-place). The other operations (`+`, `*`, slicing) create new list objects without altering `my_list`."
+    },
+    {
+        "id": "lists_01",
+        "question": "What is the primary characteristic that defines a Python list?",
+        "options": [
+            "It is immutable",
+            "It is an ordered collection of items",
+            "It can only store elements of the same data type",
+            "It has a fixed size once created"
+        ],
+        "correct_answer": "It is an ordered collection of items",
+        "explanation": "Python lists are ordered, meaning elements maintain their insertion order and can be accessed by index. They are also mutable and can store heterogeneous elements."
+    },
+    {
+        "id": "lists_02",
+        "question": "How do you correctly create an empty list in Python?",
+        "options": [
+            "list()",
+            "{}",
+            "empty_list = new List()",
+            "empty_list = ()"
+        ],
+        "correct_answer": "list()",
+        "explanation": "An empty list can be created using either `[]` or the `list()` constructor. `[]` is generally preferred for its conciseness."
+    },
+    {
+        "id": "lists_03",
+        "question": "Given `my_list = [10, 20, 30, 40, 50]`, what is the value of `my_list[2]`?",
+        "options": [
+            "10",
+            "20",
+            "30",
+            "40"
+        ],
+        "correct_answer": "30",
+        "explanation": "List indexing starts from 0. So, `my_list[0]` is 10, `my_list[1]` is 20, and `my_list[2]` is 30."
+    },
+    {
+        "id": "lists_04",
+        "question": "Given `data = ['apple', 'banana', 'cherry', 'date']`, what is `data[-2]`?",
+        "options": [
+            "'apple'",
+            "'banana'",
+            "'cherry'",
+            "'date'"
+        ],
+        "correct_answer": "'cherry'",
+        "explanation": "Negative indexing accesses elements from the end of the list. `data[-1]` is the last element ('date'), and `data[-2]` is the second to last ('cherry')."
+    },
+    {
+        "id": "lists_05",
+        "question": "What will `numbers[1:4]` return given `numbers = [1, 2, 3, 4, 5, 6]`?",
+        "options": [
+            "`[1, 2, 3]`",
+            "`[2, 3, 4]`",
+            "`[1, 2, 3, 4]`",
+            "`[2, 3, 4, 5]`"
+        ],
+        "correct_answer": "`[2, 3, 4]`",
+        "explanation": "Slicing `[start:end]` includes elements from the `start` index up to, but not including, the `end` index. So, elements at index 1, 2, and 3 are included."
+    },
+    {
+        "id": "lists_06",
+        "question": "Given `my_list = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]`, what is the result of `my_list[::2]`?",
+        "options": [
+            "`[0, 1, 2, 3, 4, 5, 6, 7, 8, 9]`",
+            "`[0, 2, 4, 6, 8]`",
+            "`[1, 3, 5, 7, 9]`",
+            "`[9, 7, 5, 3, 1]`"
+        ],
+        "correct_answer": "`[0, 2, 4, 6, 8]`",
+        "explanation": "The slice `[::2]` means start from the beginning, go to the end, and take every second element."
+    },
+    {
+        "id": "lists_07",
+        "question": "What is the output of `['a', 'b', 'c'][::-1]`?",
+        "options": [
+            "`['a', 'b', 'c']`",
+            "`['c', 'b', 'a']`",
+            "`[]`",
+            "`['c']`"
+        ],
+        "correct_answer": "`['c', 'b', 'a']`",
+        "explanation": "A step of `-1` in slicing reverses the order of the elements in the list."
+    },
+    {
+        "id": "lists_08",
+        "question": "If `my_list = [1, 2, 3]`, what will `my_list` be after `my_list.append(4)`?",
+        "options": [
+            "`[4, 1, 2, 3]`",
+            "`[1, 2, 3, 4]`",
+            "`[[1, 2, 3], 4]`",
+            "Error"
+        ],
+        "correct_answer": "`[1, 2, 3, 4]`",
+        "explanation": "The `append()` method adds a single element to the end of the list."
+    },
+    {
+        "id": "lists_09",
+        "question": "Given `colors = ['red', 'blue']`, what is the state of `colors` after `colors.insert(1, 'green')`?",
+        "options": [
+            "`['red', 'blue', 'green']`",
+            "`['red', 'green', 'blue']`",
+            "`['green', 'red', 'blue']`",
+            "`['green', 'blue']`"
+        ],
+        "correct_answer": "`['red', 'green', 'blue']`",
+        "explanation": "The `insert(index, element)` method adds an element at a specified index, shifting existing elements to the right."
+    },
+    {
+        "id": "lists_10",
+        "question": "If `data = [10, 20, 30, 20, 40]`, what is `data` after `data.remove(20)`?",
+        "options": [
+            "`[10, 30, 20, 40]`",
+            "`[10, 30, 40]`",
+            "`[10, 20, 30, 40]`",
+            "Error"
+        ],
+        "correct_answer": "`[10, 30, 20, 40]`",
+        "explanation": "The `remove()` method removes only the first occurrence of the specified value from the list."
+    },
+    {
+        "id": "lists_11",
+        "question": "Given `stack = [1, 2, 3]`, what is the value returned by `stack.pop()` and what is `stack` afterwards?",
+        "options": [
+            "`3`, `stack` is `[1, 2]`",
+            "`1`, `stack` is `[2, 3]`",
+            "Error",
+            "`None`, `stack` is `[]`"
+        ],
+        "correct_answer": "`3`, `stack` is `[1, 2]`",
+        "explanation": "The `pop()` method without an argument removes and returns the last element of the list. The list is modified in-place."
+    },
+    {
+        "id": "lists_12",
+        "question": "If `list1 = [1, 2]` and `list2 = [3, 4]`, what is the state of `list1` after `list1.extend(list2)`?",
+        "options": [
+            "`[1, 2, 3, 4]`",
+            "`[[1, 2], [3, 4]]`",
+            "`[1, 2, [3, 4]]`",
+            "Error"
+        ],
+        "correct_answer": "`[1, 2, 3, 4]`",
+        "explanation": "The `extend()` method adds all elements from an iterable (like another list) to the end of the current list."
+    },
+    {
+        "id": "lists_13",
+        "question": "Given `values = [3, 1, 4, 1, 5, 9, 2]`, what is `values` after `values.sort()`?",
+        "options": [
+            "`[1, 1, 2, 3, 4, 5, 9]`",
+            "`[9, 5, 4, 3, 2, 1, 1]`",
+            "`None`",
+            "Error"
+        ],
+        "correct_answer": "`[1, 1, 2, 3, 4, 5, 9]`",
+        "explanation": "The `sort()` method sorts the list in-place in ascending order. It returns `None`."
+    },
+    {
+        "id": "lists_14",
+        "question": "If `chars = ['a', 'b', 'a', 'c', 'a']`, what is the result of `chars.count('a')`?",
+        "options": [
+            "1",
+            "2",
+            "3",
+            "4"
+        ],
+        "correct_answer": "3",
+        "explanation": "The `count()` method returns the number of times a specified value appears in the list."
+    },
+    {
+        "id": "lists_15",
+        "question": "What is the result of the list comprehension `[x * 2 for x in range(3)]`?",
+        "options": [
+            "`[0, 1, 2]`",
+            "`[0, 2, 4]`",
+            "`[2, 4, 6]`",
+            "`[1, 2, 3]`"
+        ],
+        "correct_answer": "`[0, 2, 4]`",
+        "explanation": "`range(3)` generates numbers 0, 1, 2. Each number is then multiplied by 2."
+    },
+    {
+        "id": "lists_16",
+        "question": "What is the result of `[x for x in [1, 2, 3, 4, 5] if x % 2 == 0]`?",
+        "options": [
+            "`[1, 3, 5]`",
+            "`[2, 4]`",
+            "`[1, 2, 3, 4, 5]`",
+            "`[]`"
+        ],
+        "correct_answer": "`[2, 4]`",
+        "explanation": "The list comprehension iterates through the numbers and includes only those for which the condition `x % 2 == 0` (x is even) is true."
+    },
+    {
+        "id": "lists_17",
+        "question": "What is the result of `[s.upper() for s in ['hello', 'world']]`?",
+        "options": [
+            "`['hello', 'world']`",
+            "`['HELLO', 'WORLD']`",
+            "`['H', 'W']`",
+            "`['h', 'e', 'l', 'l', 'o', 'w', 'o', 'r', 'l', 'd']`"
+        ],
+        "correct_answer": "`['HELLO', 'WORLD']`",
+        "explanation": "The list comprehension applies the `.upper()` string method to each string in the input list."
+    },
+    {
+        "id": "lists_18",
+        "question": "Which of the following operations modifies a list in-place?",
+        "options": [
+            "`list1 + list2`",
+            "`list1[0:2]`",
+            "`list1.append(item)`",
+            "`sorted(list1)`"
+        ],
+        "correct_answer": "`list1.append(item)`",
+        "explanation": "The `append()` method modifies the original list directly by adding an item. `+` creates a new list, slicing creates a new list, and `sorted()` returns a new sorted list without changing the original."
+    },
+    {
+        "id": "lists_19",
+        "question": "What is the result of `[(x, y) for x in [1, 2] for y in ['a', 'b']]`?",
+        "options": [
+            "`[(1, 'a'), (2, 'b')]`",
+            "`[(1, 'a'), (1, 'b'), (2, 'a'), (2, 'b')]`",
+            "`[['a', 'b'], ['a', 'b']]`",
+            "`[(1, 2), ('a', 'b')]`"
+        ],
+        "correct_answer": "`[(1, 'a'), (1, 'b'), (2, 'a'), (2, 'b')]`",
+        "explanation": "This is a nested list comprehension that generates all possible pairs by iterating through each element of the first list and then each element of the second list."
+    },
+    {
+        "id": "lists_20",
+        "question": "Given `original = [1, 2, 3]`, if `new_list = original`, and then `new_list.append(4)`, what are `original` and `new_list`?",
+        "options": [
+            "`original=[1, 2, 3], new_list=[1, 2, 3, 4]`",
+            "`original=[1, 2, 3, 4], new_list=[1, 2, 3, 4]`",
+            "`original=[1, 2, 3], new_list=[1, 2, 3]`",
+            "Error"
+        ],
+        "correct_answer": "`original=[1, 2, 3, 4], new_list=[1, 2, 3, 4]`",
+        "explanation": "When you assign `new_list = original`, both variables refer to the *same* list object in memory. Therefore, modifying the list through `new_list` also affects `original`. To create an independent copy, you would use `original.copy()` or `list(original)`."
+    }
+]

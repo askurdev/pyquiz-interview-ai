@@ -1,0 +1,722 @@
+[
+    {
+        "id": "loops_01",
+        "question": "What will be the output of the following Python code snippet?for i in range(3): print(i)",
+        "options": [
+            "012",
+            "0123",
+            "0 1 2",
+            "Error"
+        ],
+        "correct_answer": "0 1 2",
+        "explanation": "The range(3) function generates numbers 0, 1, and 2. The print statement is executed for each number, printing them on separate lines by default."
+    },
+    {
+        "id": "loops_02",
+        "question": "Which keyword is used to skip the rest of the current loop's body and immediately proceed to the next iteration?",
+        "options": [
+            "break",
+            "skip",
+            "continue",
+            "pass"
+        ],
+        "correct_answer": "continue",
+        "explanation": "The 'continue' statement is used to end the current iteration of the loop and move to the next iteration, skipping any remaining code in the current iteration."
+    },
+    {
+        "id": "loops_03",
+        "question": "What will be the output of the following Python code snippet?count = 0while count < 3: print(count) count += 1",
+        "options": [
+            "012",
+            "0123",
+            "0 1 2",
+            "Error"
+        ],
+        "correct_answer": "0 1 2",
+        "explanation": "The 'while' loop continues as long as 'count' is less than 3. It prints 'count' (0, 1, 2) and then increments it. When 'count' becomes 3, the condition 'count < 3' is false, and the loop terminates."
+    },
+    {
+        "id": "loops_04",
+        "question": "What does the 'break' statement do in a loop?",
+        "options": [
+            "Skips the current iteration and continues with the next.",
+            "Exits the loop entirely.",
+            "Ignores the current iteration but doesn't exit.",
+            "Raises an error."
+        ],
+        "correct_answer": "Exits the loop entirely.",
+        "explanation": "The 'break' statement immediately terminates the loop (either 'for' or 'while') and transfers control to the statement immediately following the loop."
+    },
+    {
+        "id": "loops_05",
+        "question": "Consider the code:for i in [1, 2, 3]: if i == 2: break print(i)else: print('Loop finished')What is the output?",
+        "options": [
+            "1",
+            "12",
+            "1Loop finished",
+            "Error"
+        ],
+        "correct_answer": "1",
+        "explanation": "The loop iterates. When i is 1, it prints 1. When i is 2, the 'break' statement is executed, which terminates the loop immediately. The 'else' block associated with the 'for' loop is only executed if the loop completes without encountering a 'break'."
+    },
+    {
+        "id": "loops_06",
+        "question": "What is the purpose of the 'pass' statement in Python loops?",
+        "options": [
+            "It is used to exit the loop.",
+            "It is used to skip the current iteration.",
+            "It is a null operation; nothing happens when it executes.",
+            "It forces the loop to run indefinitely."
+        ],
+        "correct_answer": "It is a null operation; nothing happens when it executes.",
+        "explanation": "The 'pass' statement is a null operation. It does nothing. It's often used as a placeholder where a statement is syntactically required but you don't want any code to execute."
+    },
+    {
+        "id": "loops_07",
+        "question": "How many times will 'Hello' be printed?for i in range(2): for j in range(3): print('Hello')",
+        "options": [
+            "2",
+            "3",
+            "5",
+            "6"
+        ],
+        "correct_answer": "6",
+        "explanation": "The outer loop runs 2 times (for i=0, 1). For each iteration of the outer loop, the inner loop runs 3 times (for j=0, 1, 2). So, 'Hello' is printed 2 * 3 = 6 times."
+    },
+    {
+        "id": "loops_08",
+        "question": "Which of the following creates an infinite loop?",
+        "options": [
+            "for i in range(10): pass",
+            "count = 10 while count > 0: count -= 1",
+            "while True: pass",
+            "for char in 'Python': pass"
+        ],
+        "correct_answer": "while True: pass",
+        "explanation": "The condition 'True' is always true, so the 'while' loop will never terminate on its own, leading to an infinite loop."
+    },
+    {
+        "id": "loops_09",
+        "question": "What will this code print?i = 0while i < 5: if i == 3: i += 1 continue print(i) i += 1",
+        "options": [
+            "01234",
+            "0124",
+            "012",
+            "0123"
+        ],
+        "correct_answer": "0124",
+        "explanation": "When i is 0, 1, 2, it prints i and increments. When i is 3, 'i += 1' makes i 4, and 'continue' skips the 'print(i)' and the second 'i += 1'. The loop then checks the condition with i=4, prints 4, and increments to 5. The loop terminates when i is 5."
+    },
+    {
+        "id": "loops_10",
+        "question": "What is the correct way to iterate over a dictionary's keys and values simultaneously in a 'for' loop?",
+        "options": [
+            "for key, value in dict.items():",
+            "for key, value in dict:",
+            "for key, value in dict.keys():",
+            "for key, value in dict.values():"
+        ],
+        "correct_answer": "for key, value in dict.items():",
+        "explanation": "The '.items()' method of a dictionary returns a view object that displays a list of a dictionary's key-value tuple pairs, allowing simultaneous iteration."
+    },
+    {
+        "id": "loops_11",
+        "question": "What will be the output?s = 'hello'for char in s: if char == 'l': break print(char)",
+        "options": [
+            "h",
+            "he",
+            "hel",
+            "hello"
+        ],
+        "correct_answer": "he",
+        "explanation": "The loop iterates through 'h', then 'e', printing each. When 'char' becomes 'l', the 'break' statement is executed, which terminates the loop entirely before 'l' can be printed."
+    },
+    {
+        "id": "loops_12",
+        "question": "Which loop type is generally preferred when the number of iterations is known beforehand?",
+        "options": [
+            "while loop",
+            "for loop",
+            "do-while loop (Python does not have this directly)",
+            "goto loop (Python does not have this)"
+        ],
+        "correct_answer": "for loop",
+        "explanation": "A 'for' loop is typically used for iterating over a sequence (like a list, tuple, string, or range) or other iterable objects, where the number of iterations is often implicitly known or determined by the length of the sequence."
+    },
+    {
+        "id": "loops_13",
+        "question": "What will be printed by this code?for x in range(1, 4): print(x * 2)",
+        "options": [
+            "246",
+            "123",
+            "024",
+            "2468"
+        ],
+        "correct_answer": "246",
+        "explanation": "range(1, 4) generates numbers 1, 2, 3. The loop prints 1*2=2, then 2*2=4, then 3*2=6, each on a new line."
+    },
+    {
+        "id": "loops_14",
+        "question": "Consider the following:data = [10, 20, 30]index = 0while index < len(data): if data[index] == 20: break print(data[index]) index += 1What is the output?",
+        "options": [
+            "10",
+            "1020",
+            "102030",
+            "Error"
+        ],
+        "correct_answer": "10",
+        "explanation": "The loop starts, prints 10. In the next iteration, data[index] (which is 20) equals 20, so 'break' is executed, terminating the loop. Only 10 is printed."
+    },
+    {
+        "id": "loops_15",
+        "question": "What does 'enumerate()' do when used with a 'for' loop?",
+        "options": [
+            "It iterates over the elements of a sequence.",
+            "It iterates over the indices of a sequence.",
+            "It iterates over both the indices and the elements of a sequence.",
+            "It reverses the order of iteration."
+        ],
+        "correct_answer": "It iterates over both the indices and the elements of a sequence.",
+        "explanation": "The 'enumerate()' function adds a counter to an iterable and returns it as an enumerate object. This object can then be used in a 'for' loop to get both the index and the value of each item."
+    },
+    {
+        "id": "loops_16",
+        "question": "What will this print?for i in range(1, 3): for j in range(1, 3): if i == j: continue print(f'{i}{j}')",
+        "options": [
+            "1221",
+            "11122122",
+            "122122",
+            "Nothing"
+        ],
+        "correct_answer": "1221",
+        "explanation": "Outer loop (i=1): Inner loop (j=1): i==j is true, continue. Inner loop (j=2): i==j is false, prints '12'.Outer loop (i=2): Inner loop (j=1): i==j is false, prints '21'. Inner loop (j=2): i==j is true, continue."
+    },
+    {
+        "id": "loops_17",
+        "question": "Which of these is NOT a valid way to iterate over numbers from 0 to 4 (inclusive)?",
+        "options": [
+            "for i in range(5):",
+            "i = 0 while i < 5: i += 1",
+            "for i in [0, 1, 2, 3, 4]:",
+            "for i in range(0, 5, 1):"
+        ],
+        "correct_answer": "i = 0 while i < 5: i += 1",
+        "explanation": "The code 'i = 0; while i < 5: i += 1' increments 'i' but doesn't print or use it. It only iterates. The question asks for a way to iterate *over* numbers, implying they should be accessible or used within the loop, which the provided option doesn't explicitly do (it's a control structure, not an iteration over generated values for use)."
+    },
+    {
+        "id": "loops_18",
+        "question": "What happens if a 'break' statement is executed in an inner loop?",
+        "options": [
+            "It breaks out of all nested loops.",
+            "It breaks out of the inner loop only.",
+            "It breaks out of the outer loop only.",
+            "It causes a runtime error."
+        ],
+        "correct_answer": "It breaks out of the inner loop only.",
+        "explanation": "A 'break' statement only affects the innermost loop it is contained within. It terminates that specific loop, and execution continues with the statement immediately following that inner loop."
+    },
+    {
+        "id": "loops_19",
+        "question": "What is the output of the following code?i = 0while i < 3: print(i) i += 1else: print('End of loop')",
+        "options": [
+            "012",
+            "012End of loop",
+            "0123End of loop",
+            "End of loop"
+        ],
+        "correct_answer": "012End of loop",
+        "explanation": "The 'while' loop executes for i=0, 1, 2. After the condition 'i < 3' becomes false (when i is 3), the 'else' block associated with the 'while' loop is executed, printing 'End of loop'."
+    },
+    {
+        "id": "loops_20",
+        "question": "How can you make a 'for' loop iterate through a list in reverse order?",
+        "options": [
+            "for item in list.reverse():",
+            "for item in reversed(list):",
+            "for item in list[::-1]:",
+            "Both B and C"
+        ],
+        "correct_answer": "Both B and C",
+        "explanation": "Both 'reversed(list)' and 'list[::-1]' (slice notation for a reversed copy) are valid ways to iterate through a list in reverse. 'list.reverse()' modifies the list in-place and returns None, so it cannot be directly iterated upon."
+    },
+    {
+        "id": "loops_01",
+        "question": "What will be the output of the following Python code?\n```python\nfruits = [\"apple\", \"banana\", \"cherry\"]\nfor x in fruits:\n    print(x)\n```",
+        "options": [
+            "applebananacherry",
+            "[\"apple\", \"banana\", \"cherry\"]",
+            "apple banana cherry",
+            "Each fruit on a new line: apple, banana, cherry"
+        ],
+        "correct_answer": "Each fruit on a new line: apple, banana, cherry",
+        "explanation": "The `for` loop iterates over each item in the list, and `print(x)` will print each item followed by a newline by default."
+    },
+    {
+        "id": "loops_02",
+        "question": "What will be the output of `list(range(1, 5))`?",
+        "options": [
+            "[1, 2, 3, 4, 5]",
+            "[1, 2, 3, 4]",
+            "[0, 1, 2, 3, 4]",
+            "[2, 3, 4, 5]"
+        ],
+        "correct_answer": "[1, 2, 3, 4]",
+        "explanation": "`range(start, stop)` generates numbers from `start` up to (but not including) `stop`."
+    },
+    {
+        "id": "loops_03",
+        "question": "What will be printed by the following code?\n```python\ni = 0\nwhile i < 3:\n    print(i)\n    i += 1\n```",
+        "options": [
+            "0123",
+            "012",
+            "123",
+            "An infinite loop"
+        ],
+        "correct_answer": "012",
+        "explanation": "The loop runs for `i=0`, `i=1`, and `i=2`. When `i` becomes `3`, the condition `i < 3` is false, and the loop terminates."
+    },
+    {
+        "id": "loops_04",
+        "question": "What is the output of the following code?\n```python\nfor i in range(5):\n    if i == 3:\n        break\n    print(i)\n```",
+        "options": [
+            "0123",
+            "012",
+            "3",
+            "0124"
+        ],
+        "correct_answer": "012",
+        "explanation": "The loop starts, prints 0, 1, 2. When `i` is 3, the `if` condition is met, and `break` terminates the loop immediately, so 3 is not printed."
+    },
+    {
+        "id": "loops_05",
+        "question": "What is the output of the following code?\n```python\nfor i in range(5):\n    if i == 2:\n        continue\n    print(i)\n```",
+        "options": [
+            "01234",
+            "0134",
+            "2",
+            "01"
+        ],
+        "correct_answer": "0134",
+        "explanation": "When `i` is 2, the `continue` statement skips the rest of the current iteration and proceeds to the next iteration, so 2 is not printed."
+    },
+    {
+        "id": "loops_06",
+        "question": "What does the `pass` statement do in the following code?\n```python\nfor i in range(3):\n    if i == 1:\n        pass\n    print(i)\n```",
+        "options": [
+            "It skips the iteration when i is 1.",
+            "It terminates the loop when i is 1.",
+            "It does nothing, acting as a placeholder.",
+            "It raises an error."
+        ],
+        "correct_answer": "It does nothing, acting as a placeholder.",
+        "explanation": "The `pass` statement is a null operation; nothing happens when it executes. It's used as a placeholder where a statement is syntactically required but you don't want any code to execute."
+    },
+    {
+        "id": "loops_07",
+        "question": "What will be the output of the following Python code?\n```python\nfor i in range(3):\n    print(i)\nelse:\n    print(\"Loop finished\")\n```",
+        "options": [
+            "012Loop finished",
+            "Loop finished",
+            "012",
+            "An error"
+        ],
+        "correct_answer": "012Loop finished",
+        "explanation": "The `else` block for a `for` loop executes if the loop completes all iterations without encountering a `break` statement."
+    },
+    {
+        "id": "loops_08",
+        "question": "How many times will \"Hello\" be printed by the following code?\n```python\nfor i in range(2):\n    for j in range(3):\n        print(\"Hello\")\n```",
+        "options": [
+            "2",
+            "3",
+            "5",
+            "6"
+        ],
+        "correct_answer": "6",
+        "explanation": "The outer loop runs 2 times, and for each iteration of the outer loop, the inner loop runs 3 times. So, 2 * 3 = 6 times."
+    },
+    {
+        "id": "loops_09",
+        "question": "Which of the following will cause the loop to terminate?\n```python\ncount = 0\nwhile True:\n    print(count)\n    count += 1\n    # Missing condition to terminate\n```",
+        "options": [
+            "`if count == 5: continue`",
+            "`if count > 10: pass`",
+            "`if count == 7: break`",
+            "`count = 0` (inside the loop)"
+        ],
+        "correct_answer": "`if count == 7: break`",
+        "explanation": "The `break` statement is used to exit the loop immediately. `continue` skips the current iteration, `pass` does nothing, and resetting `count` to 0 would create an infinite loop."
+    },
+    {
+        "id": "loops_10",
+        "question": "What is the output of the following code?\n```python\nfor i in range(3):\n    for j in range(3):\n        if j == 1:\n            break\n        print(f\"i={i}, j={j}\")\n```",
+        "options": [
+            "i=0, j=0i=1, j=0i=2, j=0",
+            "i=0, j=0i=0, j=1i=1, j=0i=1, j=1i=2, j=0i=2, j=1",
+            "i=0, j=0",
+            "i=0, j=0i=1, j=0i=2, j=0i=0, j=1i=1, j=1i=2, j=1"
+        ],
+        "correct_answer": "i=0, j=0i=1, j=0i=2, j=0",
+        "explanation": "The `break` statement only affects the innermost loop it is contained within. When `j` is 1, the inner loop breaks, and the outer loop continues to its next iteration. So for each `i`, only `j=0` is printed."
+    },
+    {
+        "id": "loops_11",
+        "question": "What will be the output of the following code?\n```python\nword = \"Python\"\nfor char in word:\n    print(char, end=\"-\")\n```",
+        "options": [
+            "P-y-t-h-o-n-",
+            "P-y-t-h-o-n",
+            "Python-",
+            "P y t h o n"
+        ],
+        "correct_answer": "P-y-t-h-o-n-",
+        "explanation": "The `for` loop iterates over each character in the string. `print(char, end=\"-\")` prints the character followed by a hyphen, without a final newline until the loop completes."
+    },
+    {
+        "id": "loops_12",
+        "question": "What will be the output of the following code?\n```python\ncount = 0\nwhile count < 2:\n    print(f\"Inside loop: {count}\")\n    count += 1\nelse:\n    print(\"Else block executed\")\n```",
+        "options": [
+            "Inside loop: 0Inside loop: 1Else block executed",
+            "Inside loop: 0Inside loop: 1",
+            "Else block executed",
+            "An error because `else` cannot be used with `while`."
+        ],
+        "correct_answer": "Inside loop: 0Inside loop: 1Else block executed",
+        "explanation": "Similar to `for-else`, the `else` block for a `while` loop executes if the loop completes normally (i.e., its condition becomes false) without encountering a `break` statement."
+    },
+    {
+        "id": "loops_13",
+        "question": "Which of the following code snippets will result in an infinite loop?",
+        "options": [
+            "`i = 0; while i < 5: print(i); i += 1`",
+            "`i = 5; while i > 0: print(i); i -= 1`",
+            "`i = 0; while i < 5: print(i)`",
+            "`for i in range(5): print(i)`"
+        ],
+        "correct_answer": "`i = 0; while i < 5: print(i)`",
+        "explanation": "In this option, `i` is never incremented, so `i < 5` will always be true, leading to an infinite loop."
+    },
+    {
+        "id": "loops_14",
+        "question": "What is the output of the following code?\n```python\ni = 0\nwhile i < 5:\n    i += 1\n    if i == 3:\n        continue\n    print(i)\n```",
+        "options": [
+            "12345",
+            "1245",
+            "01245",
+            "12"
+        ],
+        "correct_answer": "1245",
+        "explanation": "`i` is incremented *before* the `if` check. When `i` becomes 3, `continue` is executed, skipping `print(i)` for that iteration. So 3 is not printed."
+    },
+    {
+        "id": "loops_15",
+        "question": "What will `list(range(0, 10, 2))` produce?",
+        "options": [
+            "[0, 2, 4, 6, 8, 10]",
+            "[0, 2, 4, 6, 8]",
+            "[1, 3, 5, 7, 9]",
+            "[2, 4, 6, 8]"
+        ],
+        "correct_answer": "[0, 2, 4, 6, 8]",
+        "explanation": "`range(start, stop, step)` generates numbers from `start` up to (but not including) `stop`, incrementing by `step`."
+    },
+    {
+        "id": "loops_16",
+        "question": "What is the output of this code?\n```python\ns = 0\nfor i in range(2):\n    for j in range(2):\n        s += i + j\nprint(s)\n```",
+        "options": [
+            "0",
+            "3",
+            "4",
+            "6"
+        ],
+        "correct_answer": "4",
+        "explanation": "Trace: (i=0,j=0) s=0; (i=0,j=1) s=1; (i=1,j=0) s=1+1+0=2; (i=1,j=1) s=2+1+1=4. Final `s` is 4."
+    },
+    {
+        "id": "loops_17",
+        "question": "What will be the output of the following Python code?\n```python\nfor i in range(3):\n    if i == 1:\n        break\n    print(i)\nelse:\n    print(\"Else block\")\n```",
+        "options": [
+            "0",
+            "0Else block",
+            "01Else block",
+            "An error"
+        ],
+        "correct_answer": "0",
+        "explanation": "When `break` is executed, the `else` block associated with the loop is skipped. Only `i=0` is printed before the loop terminates."
+    },
+    {
+        "id": "loops_18",
+        "question": "What is the key difference between `pass` and `continue` in a loop?",
+        "options": [
+            "`pass` exits the loop, `continue` skips the current iteration.",
+            "`pass` skips the current iteration, `continue` does nothing.",
+            "`pass` does nothing, `continue` skips the current iteration.",
+            "`pass` is used for error handling, `continue` is for normal flow."
+        ],
+        "correct_answer": "`pass` does nothing, `continue` skips the current iteration.",
+        "explanation": "`pass` is a null operation, a placeholder. `continue` skips the rest of the current loop iteration and moves to the next one."
+    },
+    {
+        "id": "loops_19",
+        "question": "What will be the output of the following code?\n```python\nmy_list = [1, 2, 3]\nfor x in my_list:\n    my_list.append(x + 3)\n    if len(my_list) > 6:\n        break\nprint(my_list)\n```",
+        "options": [
+            "[1, 2, 3, 4, 5, 6]",
+            "[1, 2, 3, 4, 5, 6, 7]",
+            "[1, 2, 3, 4, 5, 6, 7, 8]",
+            "[1, 2, 3, 4, 5, 6, 7, 8, 9]"
+        ],
+        "correct_answer": "[1, 2, 3, 4, 5, 6, 7]",
+        "explanation": "The loop iterates over the list. When `x=1`, `my_list` becomes `[1,2,3,4]`. When `x=2`, `my_list` becomes `[1,2,3,4,5]`. When `x=3`, `my_list` becomes `[1,2,3,4,5,6]`. The iterator then fetches the newly added `4` (`my_list[3]`). When `x=4`, `my_list` becomes `[1,2,3,4,5,6,7]`. At this point, `len(my_list)` is 7, which is `> 6`, so the `break` statement is executed, and the loop terminates."
+    },
+    {
+        "id": "loops_20",
+        "question": "What will be the final value of `x`?\n```python\nx = 0\ny = 5\nwhile x < y and y > 2:\n    x += 1\n    y -= 1\nprint(x)\n```",
+        "options": [
+            "0",
+            "2",
+            "3",
+            "5"
+        ],
+        "correct_answer": "3",
+        "explanation": "Initial: x=0, y=5. Loop 1: x=1, y=4. Loop 2: x=2, y=3. Loop 3: x=3, y=2. At this point, `x < y` (3 < 2) is False, so the loop terminates. The final value of `x` is 3."
+    },
+    {
+        "id": "loops_01",
+        "question": "What will be the output of the following Python code?\nfor i in range(3):\n  print(i)",
+        "options": [
+            "0\n1\n2",
+            "1\n2\n3",
+            "0\n1\n2\n3",
+            "Error"
+        ],
+        "correct_answer": "0\n1\n2",
+        "explanation": "The `range(3)` function generates numbers 0, 1, 2. Each `print(i)` statement outputs the number followed by a newline character by default."
+    },
+    {
+        "id": "loops_02",
+        "question": "What will be the output of the following Python code?\ncount = 0\nwhile count < 2:\n  print(count)\n  count += 1",
+        "options": [
+            "0\n1",
+            "1\n2",
+            "0\n1\n2",
+            "Error"
+        ],
+        "correct_answer": "0\n1",
+        "explanation": "The `while` loop runs when `count` is 0 and 1. When `count` becomes 2, the condition `count < 2` is false, and the loop terminates. Each `print(count)` adds a newline."
+    },
+    {
+        "id": "loops_03",
+        "question": "What will be the output of the following Python code?\nfor i in range(5):\n  if i == 3:\n    break\n  print(i)",
+        "options": [
+            "0\n1\n2",
+            "0\n1\n2\n3",
+            "0\n1\n2\n3\n4",
+            "Error"
+        ],
+        "correct_answer": "0\n1\n2",
+        "explanation": "The loop iterates through 0, 1, 2, 3, 4. When `i` becomes 3, the `break` statement is executed, which immediately terminates the loop. Thus, 3 and 4 are not printed."
+    },
+    {
+        "id": "loops_04",
+        "question": "What will be the output of the following Python code?\nfor i in range(4):\n  if i == 1:\n    continue\n  print(i)",
+        "options": [
+            "0\n2\n3",
+            "0\n1\n2\n3",
+            "1\n2\n3",
+            "0\n2"
+        ],
+        "correct_answer": "0\n2\n3",
+        "explanation": "The loop iterates through 0, 1, 2, 3. When `i` is 1, the `continue` statement skips the rest of the current iteration (the `print(i)` statement) and proceeds to the next iteration. So, 1 is not printed."
+    },
+    {
+        "id": "loops_05",
+        "question": "What will be the output of the following Python code?\nfor i in range(3):\n  if i == 1:\n    pass\n  print(i)",
+        "options": [
+            "0\n1\n2",
+            "0\n2",
+            "1",
+            "Error"
+        ],
+        "correct_answer": "0\n1\n2",
+        "explanation": "The `pass` statement is a null operation; it does nothing. When `i` is 1, `pass` is executed, but the loop continues normally, and `print(i)` is executed. Therefore, all numbers from 0 to 2 are printed on separate lines."
+    },
+    {
+        "id": "loops_06",
+        "question": "How many times will \"Hello\" be printed?\nfor i in range(2):\n  for j in range(3):\n    print(\"Hello\")",
+        "options": [
+            "2",
+            "3",
+            "5",
+            "6"
+        ],
+        "correct_answer": "6",
+        "explanation": "The outer loop runs 2 times (for i=0, 1). For each iteration of the outer loop, the inner loop runs 3 times (for j=0, 1, 2). So, 'Hello' is printed 2 * 3 = 6 times."
+    },
+    {
+        "id": "loops_07",
+        "question": "What will be the output of the following Python code?\nfruits = [\"apple\", \"banana\"]\nfor x in fruits:\n  print(x)",
+        "options": [
+            "apple\nbanana",
+            "applebanana",
+            "[\"apple\", \"banana\"]",
+            "Error"
+        ],
+        "correct_answer": "apple\nbanana",
+        "explanation": "The `for` loop iterates over each item in the `fruits` list. Each `print(x)` statement outputs the current item followed by a newline, so 'apple' and 'banana' are printed on separate lines."
+    },
+    {
+        "id": "loops_08",
+        "question": "What will be the output of the following Python code?\ni = 0\nwhile i < 2:\n  print(i)\n  i += 1\nelse:\n  print(\"Done\")",
+        "options": [
+            "0\n1\nDone",
+            "0\n1",
+            "Done",
+            "Error"
+        ],
+        "correct_answer": "0\n1\nDone",
+        "explanation": "The `while` loop executes for `i=0` and `i=1`. After `i` becomes 2, the loop condition `i < 2` is false, and the loop terminates normally. The `else` block associated with a `while` loop executes only if the loop completes without encountering a `break` statement."
+    },
+    {
+        "id": "loops_09",
+        "question": "What will be the output of the following Python code?\nfor i in range(1):\n  print(i)\nelse:\n  print(\"Finished\")",
+        "options": [
+            "0\nFinished",
+            "0",
+            "Finished",
+            "Error"
+        ],
+        "correct_answer": "0\nFinished",
+        "explanation": "The `for` loop iterates once for `i=0`, printing '0'. Since the loop completes normally (without a `break`), its `else` block is executed, printing 'Finished' on a new line."
+    },
+    {
+        "id": "loops_10",
+        "question": "What will be the output of the following Python code?\ncount = 0\nwhile True:\n  print(count)\n  count += 1\n  if count >= 2:\n    break",
+        "options": [
+            "0\n1",
+            "0\n1\n2",
+            "0\n1\n2\n... (infinite loop)",
+            "Error"
+        ],
+        "correct_answer": "0\n1",
+        "explanation": "The `while True` creates an infinite loop. However, the `if count >= 2: break` statement terminates the loop when `count` reaches 2. So, 0 and 1 are printed before `count` becomes 2 and the loop breaks."
+    },
+    {
+        "id": "loops_11",
+        "question": "What will be the output of the following Python code?\ni = 0\nwhile i < 3:\n  i += 1\n  if i == 2:\n    continue\n  print(i)",
+        "options": [
+            "1\n3",
+            "1\n2\n3",
+            "2\n3",
+            "Error"
+        ],
+        "correct_answer": "1\n3",
+        "explanation": "When `i` becomes 1, it's printed. When `i` becomes 2, the `continue` statement skips the `print(i)` for that iteration. When `i` becomes 3, it's printed. The loop condition `i < 3` then becomes false, and the loop terminates."
+    },
+    {
+        "id": "loops_12",
+        "question": "Which of the following code snippets will result in an infinite loop?",
+        "options": [
+            "i = 0; while i < 5: print(i); i += 1",
+            "i = 5; while i > 0: print(i); i -= 1",
+            "i = 0; while i < 5: print(i)",
+            "for i in range(5): print(i)"
+        ],
+        "correct_answer": "i = 0; while i < 5: print(i)",
+        "explanation": "In the third option, the variable `i` is never incremented, so the condition `i < 5` remains true indefinitely, leading to an infinite loop."
+    },
+    {
+        "id": "loops_13",
+        "question": "What will be the output of the following Python code?\nfor char in \"Python\":\n  print(char, end=\"\")",
+        "options": [
+            "Python",
+            "P y t h o n",
+            "Error",
+            "Pyt hon"
+        ],
+        "correct_answer": "Python",
+        "explanation": "The `for` loop iterates over each character in the string \"Python\". The `end=\"\"` argument in the `print()` function prevents a newline character from being added after each character, causing them to be printed on the same line consecutively."
+    },
+    {
+        "id": "loops_14",
+        "question": "What will be the output of the following Python code?\ndata = [\"a\", \"b\"]\nfor index, value in enumerate(data):\n  print(f\"{index}-{value}\")",
+        "options": [
+            "0-a\n1-b",
+            "0-a1-b",
+            "a-0\nb-1",
+            "Error"
+        ],
+        "correct_answer": "0-a\n1-b",
+        "explanation": "The `enumerate()` function adds a counter to an iterable and returns it as an enumerate object. The loop unpacks each item into `index` and `value`. Each `print()` call then outputs the formatted string followed by a newline."
+    },
+    {
+        "id": "loops_15",
+        "question": "What will be the output of the following Python code?\nfor i in range(2):\n  for j in range(2):\n    if i == 1 and j == 0:\n      break\n    print(f\"{i}{j}\")",
+        "options": [
+            "00\n01\n",
+            "00\n01\n10\n",
+            "00\n01\n11\n",
+            "Error"
+        ],
+        "correct_answer": "00\n01\n",
+        "explanation": "When `i` is 0, `00` and `01` are printed. When `i` is 1 and `j` is 0, the `break` statement is encountered, terminating only the inner loop. The outer loop then finishes without further iterations of the inner loop."
+    },
+    {
+        "id": "loops_16",
+        "question": "What will be the output of the following Python code?\nfor i in range(0, 5, 2):\n  print(i)",
+        "options": [
+            "0\n2\n4",
+            "0\n1\n2\n3\n4",
+            "0\n2",
+            "Error"
+        ],
+        "correct_answer": "0\n2\n4",
+        "explanation": "The `range(start, stop, step)` function generates a sequence of numbers starting from `start`, up to (but not including) `stop`, with an increment of `step`. So, it generates 0, then 0+2=2, then 2+2=4. The next number, 4+2=6, is not included as it's not less than 5."
+    },
+    {
+        "id": "loops_17",
+        "question": "What will be the output of the following Python code?\nmy_dict = {\"a\": 1, \"b\": 2}\nfor key, value in my_dict.items():\n  print(f\"{key}:{value}\", end=\" \")",
+        "options": [
+            "a:1 b:2",
+            "a:1b:2",
+            "{\"a\": 1, \"b\": 2}",
+            "Error"
+        ],
+        "correct_answer": "a:1 b:2",
+        "explanation": "The `my_dict.items()` method returns a view of the dictionary's key-value pairs. The `for` loop iterates through these pairs, unpacking them into `key` and `value`. The `print()` function with `end=\" \"` prints each pair followed by a space, keeping them on the same line."
+    },
+    {
+        "id": "loops_18",
+        "question": "What will be the output of the following Python code?\nresult = \"\"\nfor x in range(5):\n  if x % 2 == 0:\n    continue\n  if x > 3:\n    break\n  result += str(x)\nprint(result)",
+        "options": [
+            "13",
+            "0123",
+            "123",
+            "135"
+        ],
+        "correct_answer": "13",
+        "explanation": "The loop processes `x` from 0 to 4:\n- `x=0`: `0 % 2 == 0` is true, `continue` (skips `result += str(x)`).\n- `x=1`: `1 % 2 == 0` is false. `1 > 3` is false. `result` becomes \"1\".\n- `x=2`: `2 % 2 == 0` is true, `continue`.\n- `x=3`: `3 % 2 == 0` is false. `3 > 3` is false. `result` becomes \"13\".\n- `x=4`: `4 % 2 == 0` is true, `continue`.\nAfter the loop, `result` is \"13\"."
+    },
+    {
+        "id": "loops_19",
+        "question": "What is the final value of `outer` and `inner`?\nouter = 0\ninner = 0\nwhile outer < 2:\n  outer += 1\n  inner = 0\n  while inner < 2:\n    inner += 1\nprint(f\"{outer},{inner}\")",
+        "options": [
+            "2,2",
+            "1,2",
+            "2,0",
+            "1,1"
+        ],
+        "correct_answer": "2,2",
+        "explanation": "The outer loop runs twice:\n1. `outer` becomes 1. Inner loop runs, `inner` becomes 1, then 2. Inner loop ends.\n2. `outer` becomes 2. `inner` is reset to 0. Inner loop runs, `inner` becomes 1, then 2. Inner loop ends.\nThe outer loop condition `outer < 2` is now false. The final values are `outer=2` and `inner=2`."
+    },
+    {
+        "id": "loops_20",
+        "question": "What will be the output of the following Python code?\nlist1 = [1, 2]\nlist2 = [\"a\", \"b\"]\nfor x, y in zip(list1, list2):\n  print(f\"{x}{y}\", end=\"\")",
+        "options": [
+            "1a2b",
+            "1a 2b",
+            "[1,2]['a','b']",
+            "Error"
+        ],
+        "correct_answer": "1a2b",
+        "explanation": "The `zip()` function combines elements from `list1` and `list2` into pairs: `(1, 'a')` and `(2, 'b')`. The loop iterates through these pairs. `print(f\"{x}{y}\", end=\"\")` concatenates the `x` and `y` values and prints them without a newline, resulting in '1a' followed by '2b' on the same line."
+    }
+]

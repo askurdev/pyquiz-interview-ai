@@ -1,0 +1,722 @@
+[
+    {
+        "id": "dictionaries_0",
+        "question": "Which of the following is the correct way to create an empty dictionary in Python?",
+        "options": [
+            "my_dict = {}",
+            "my_dict = dict()",
+            "my_dict = dict.new()",
+            "Both A and B"
+        ],
+        "correct_answer": "Both A and B",
+        "explanation": "Both `{}` and `dict()` are valid ways to create an empty dictionary in Python."
+    },
+    {
+        "id": "dictionaries_1",
+        "question": "Given `my_dict = {'a': 1, 'b': 2}`, how would you access the value associated with the key 'a'?",
+        "options": [
+            "my_dict[0]",
+            "my_dict('a')",
+            "my_dict['a']",
+            "my_dict.get(0)"
+        ],
+        "correct_answer": "my_dict['a']",
+        "explanation": "Values in a dictionary are accessed using their associated keys, not by index."
+    },
+    {
+        "id": "dictionaries_2",
+        "question": "How do you add a new key-value pair `('c', 3)` to `my_dict = {'a': 1, 'b': 2}`?",
+        "options": [
+            "my_dict.add('c', 3)",
+            "my_dict['c'] = 3",
+            "my_dict.insert('c', 3)",
+            "my_dict.update(('c', 3))"
+        ],
+        "correct_answer": "my_dict['c'] = 3",
+        "explanation": "New key-value pairs are added by assigning a value to a new key using square bracket notation."
+    },
+    {
+        "id": "dictionaries_3",
+        "question": "Given `my_dict = {'apple': 1, 'banana': 2}`, what will be the value of `my_dict` after `my_dict['apple'] = 3`?",
+        "options": [
+            "{'apple': 3, 'banana': 2}",
+            "{'apple': 1, 'banana': 2, 'apple': 3}",
+            "{'apple': [1, 3], 'banana': 2}",
+            "An error will occur because 'apple' already exists."
+        ],
+        "correct_answer": "{'apple': 3, 'banana': 2}",
+        "explanation": "Assigning a new value to an existing key will update its value in the dictionary."
+    },
+    {
+        "id": "dictionaries_4",
+        "question": "Which method is commonly used to check if a key exists in a dictionary?",
+        "options": [
+            "my_dict.has_key('key')",
+            "'key' in my_dict",
+            "my_dict.contains('key')",
+            "my_dict.check_key('key')"
+        ],
+        "correct_answer": "'key' in my_dict",
+        "explanation": "The `in` operator is the most Pythonic and efficient way to check for key existence in a dictionary."
+    },
+    {
+        "id": "dictionaries_5",
+        "question": "Which of the following can NOT be used as a key in a Python dictionary?",
+        "options": [
+            "An integer",
+            "A string",
+            "A tuple containing integers",
+            "A list of integers"
+        ],
+        "correct_answer": "A list of integers",
+        "explanation": "Dictionary keys must be immutable. Integers, strings, and tuples are immutable, while lists are mutable and thus cannot be used as keys."
+    },
+    {
+        "id": "dictionaries_6",
+        "question": "What happens if you try to use the same key multiple times when creating a dictionary like `{'a': 1, 'b': 2, 'a': 3}`?",
+        "options": [
+            "It will raise a `KeyError`.",
+            "It will keep both entries, treating them as distinct.",
+            "It will keep only the first entry `('a': 1)`.",
+            "It will keep only the last entry `('a': 3)`."
+        ],
+        "correct_answer": "It will keep only the last entry `('a': 3)`.",
+        "explanation": "If a key is repeated during dictionary creation, the last assigned value for that key will overwrite any previous values."
+    },
+    {
+        "id": "dictionaries_7",
+        "question": "Which statement about dictionary values is true?",
+        "options": [
+            "Dictionary values must be immutable.",
+            "Dictionary values must be of the same type.",
+            "Dictionary values can be of any data type, including other dictionaries or lists.",
+            "Dictionary values must be unique."
+        ],
+        "correct_answer": "Dictionary values can be of any data type, including other dictionaries or lists.",
+        "explanation": "Dictionary values have no restrictions on their type or mutability and do not need to be unique. They can be any valid Python object."
+    },
+    {
+        "id": "dictionaries_8",
+        "question": "Given `my_dict = {'x': 10, 'y': 20}`, what will `my_dict.get('z', 0)` return?",
+        "options": [
+            "`KeyError`",
+            "`None`",
+            "`0`",
+            "`{'x': 10, 'y': 20, 'z': 0}`"
+        ],
+        "correct_answer": "`0`",
+        "explanation": "The `get()` method returns the value for the specified key. If the key is not found, it returns the provided default value (0 in this case), or `None` if no default is specified."
+    },
+    {
+        "id": "dictionaries_9",
+        "question": "What does `my_dict.keys()` return for `my_dict = {'a': 1, 'b': 2}`?",
+        "options": [
+            "['a', 'b']",
+            "dict_keys(['a', 'b'])",
+            "(1, 2)",
+            "dict_keys([1, 2])"
+        ],
+        "correct_answer": "dict_keys(['a', 'b'])",
+        "explanation": "The `keys()` method returns a view object that displays a list of all the keys in the dictionary. It is not a list itself, but can be converted to one."
+    },
+    {
+        "id": "dictionaries_10",
+        "question": "What does `my_dict.values()` return for `my_dict = {'x': 10, 'y': 20}`?",
+        "options": [
+            "[10, 20]",
+            "dict_values([10, 20])",
+            "('x', 'y')",
+            "dict_values(['x', 'y'])"
+        ],
+        "correct_answer": "dict_values([10, 20])",
+        "explanation": "The `values()` method returns a view object that displays a list of all the values in the dictionary. It is not a list itself, but can be converted to one."
+    },
+    {
+        "id": "dictionaries_11",
+        "question": "What does `my_dict.items()` return for `my_dict = {'fruit': 'apple', 'color': 'red'}`?",
+        "options": [
+            "[('fruit', 'apple'), ('color', 'red')]",
+            "dict_items([('fruit', 'apple'), ('color', 'red')])",
+            "['fruit', 'color', 'apple', 'red']",
+            "dict_items(['fruit', 'apple', 'color', 'red'])"
+        ],
+        "correct_answer": "dict_items([('fruit', 'apple'), ('color', 'red')])",
+        "explanation": "The `items()` method returns a view object that displays a list of a dictionary's key-value tuple pairs. It is not a list itself, but can be converted to one."
+    },
+    {
+        "id": "dictionaries_12",
+        "question": "Given `dict1 = {'a': 1, 'b': 2}` and `dict2 = {'b': 3, 'c': 4}`, what is the result of `dict1.update(dict2)`?",
+        "options": [
+            "{'a': 1, 'b': 2, 'b': 3, 'c': 4}",
+            "{'a': 1, 'c': 4}",
+            "{'a': 1, 'b': 3, 'c': 4}",
+            "{'a': 1, 'b': 2}"
+        ],
+        "correct_answer": "{'a': 1, 'b': 3, 'c': 4}",
+        "explanation": "The `update()` method adds key-value pairs from `dict2` to `dict1`. If a key exists in both, the value from `dict2` overwrites the value in `dict1`."
+    },
+    {
+        "id": "dictionaries_13",
+        "question": "Given `my_dict = {'one': 1, 'two': 2, 'three': 3}`, what will `my_dict.pop('two')` return, and what will `my_dict` be afterward?",
+        "options": [
+            "Returns `2`, `my_dict` is `{'one': 1, 'three': 3}`",
+            "Returns `None`, `my_dict` is `{'one': 1, 'three': 3}`",
+            "Returns `KeyError`, `my_dict` is unchanged",
+            "Returns `('two', 2)`, `my_dict` is `{'one': 1, 'three': 3}`"
+        ],
+        "correct_answer": "Returns `2`, `my_dict` is `{'one': 1, 'three': 3}`",
+        "explanation": "The `pop()` method removes the specified key from the dictionary and returns its corresponding value. If the key is not found, it raises a `KeyError` unless a default value is provided."
+    },
+    {
+        "id": "dictionaries_14",
+        "question": "What does `my_dict.popitem()` do?",
+        "options": [
+            "Removes and returns a random key-value pair.",
+            "Removes and returns the first key-value pair inserted.",
+            "Removes and returns the last key-value pair inserted.",
+            "Removes and returns the key-value pair with the smallest key."
+        ],
+        "correct_answer": "Removes and returns the last key-value pair inserted.",
+        "explanation": "In Python 3.7 and later, `popitem()` removes and returns the last inserted key-value pair as a tuple. If the dictionary is empty, it raises a `KeyError`."
+    },
+    {
+        "id": "dictionaries_15",
+        "question": "After `my_dict = {'a': 1, 'b': 2}` executes `my_dict.clear()`, what will `my_dict` be?",
+        "options": [
+            "`None`",
+            "`{}`",
+            "An error will occur",
+            "`{'a': None, 'b': None}`"
+        ],
+        "correct_answer": "`{}`",
+        "explanation": "The `clear()` method removes all items from the dictionary, making it an empty dictionary."
+    },
+    {
+        "id": "dictionaries_16",
+        "question": "In Python 3.7 and later, what is true about the order of items in a dictionary?",
+        "options": [
+            "Dictionaries are unordered.",
+            "Dictionaries maintain insertion order.",
+            "Dictionaries are sorted by key.",
+            "Dictionaries are sorted by value."
+        ],
+        "correct_answer": "Dictionaries maintain insertion order.",
+        "explanation": "As of Python 3.7, dictionaries are officially ordered by insertion order. This means that the order in which items are added to the dictionary is preserved."
+    },
+    {
+        "id": "dictionaries_17",
+        "question": "What will be the output of `my_dict = {x: x*x for x in range(3)}`?",
+        "options": [
+            "{0: 0, 1: 1, 2: 4}",
+            "{1: 1, 2: 4, 3: 9}",
+            "{0: 0, 1: 1, 2: 2}",
+            "{0: 0, 1: 1, 4: 2}"
+        ],
+        "correct_answer": "{0: 0, 1: 1, 2: 4}",
+        "explanation": "The dictionary comprehension iterates `x` from 0 up to (but not including) 3. For each `x`, it creates a key `x` and a value `x*x`."
+    },
+    {
+        "id": "dictionaries_18",
+        "question": "What will be the output of `new_dict = {k: v for k, v in {'a':1, 'b':2, 'c':3}.items() if v % 2 == 1}`?",
+        "options": [
+            "{'a': 1, 'c': 3}",
+            "{'b': 2}",
+            "{'a': 1, 'b': 2, 'c': 3}",
+            "{'a': 1, 'c': 3, 'b': 2}"
+        ],
+        "correct_answer": "{'a': 1, 'c': 3}",
+        "explanation": "The dictionary comprehension iterates through the items of the initial dictionary and includes only those key-value pairs where the value `v` is odd."
+    },
+    {
+        "id": "dictionaries_19",
+        "question": "Given `my_dict = {'a': 1}`, what will `my_dict.setdefault('b', 2)` return, and what will `my_dict` be afterward?",
+        "options": [
+            "Returns `None`, `my_dict` is `{'a': 1}`",
+            "Returns `2`, `my_dict` is `{'a': 1, 'b': 2}`",
+            "Returns `1`, `my_dict` is `{'a': 1}`",
+            "Returns `KeyError`, `my_dict` is unchanged"
+        ],
+        "correct_answer": "Returns `2`, `my_dict` is `{'a': 1, 'b': 2}`",
+        "explanation": "The `setdefault()` method returns the value for the key if it exists. If the key is not found, it inserts the key with the specified default value into the dictionary and then returns that default value."
+    },
+    {
+        "id": "dictionaries_01",
+        "question": "How do you create an empty dictionary in Python?",
+        "options": [
+            "dict()",
+            "{}",
+            "new dict()",
+            "dict.empty()"
+        ],
+        "correct_answer": "{}",
+        "explanation": "Both `dict()` and `{}` create an empty dictionary. `{}` is the more common and concise way."
+    },
+    {
+        "id": "dictionaries_02",
+        "question": "Which of the following is NOT a valid key type for a Python dictionary?",
+        "options": [
+            "string",
+            "integer",
+            "list",
+            "tuple"
+        ],
+        "correct_answer": "list",
+        "explanation": "Dictionary keys must be immutable. Strings, integers, and tuples are immutable, while lists are mutable and thus cannot be used as keys."
+    },
+    {
+        "id": "dictionaries_03",
+        "question": "What will be the output of `d = {'a': 1, 'b': 2}; print(d['c'])`?",
+        "options": [
+            "1",
+            "KeyError",
+            "None",
+            "0"
+        ],
+        "correct_answer": "KeyError",
+        "explanation": "Accessing a key that does not exist in a dictionary using square brackets will raise a KeyError."
+    },
+    {
+        "id": "dictionaries_04",
+        "question": "Which method is used to retrieve a value from a dictionary, providing a default value if the key is not found?",
+        "options": [
+            "get()",
+            "fetch()",
+            "retrieve()",
+            "lookup()"
+        ],
+        "correct_answer": "get()",
+        "explanation": "The `get()` method allows you to specify a default value to return if the key is not found, preventing a KeyError."
+    },
+    {
+        "id": "dictionaries_05",
+        "question": "What does the `keys()` method return in Python dictionaries?",
+        "options": [
+            "A list of all keys",
+            "A dictionary view object that displays a list of all keys",
+            "A tuple of all keys",
+            "An iterator of all keys"
+        ],
+        "correct_answer": "A dictionary view object that displays a list of all keys",
+        "explanation": "The `keys()` method returns a dictionary view object, which provides a dynamic view of the dictionary's keys. It is not a list itself, but can be converted to one."
+    },
+    {
+        "id": "dictionaries_06",
+        "question": "Given `d = {'x': 10, 'y': 20}`, how would you add a new key-value pair `'z': 30`?",
+        "options": [
+            "d.add('z', 30)",
+            "d['z'] = 30",
+            "d.insert('z', 30)",
+            "d.new('z', 30)"
+        ],
+        "correct_answer": "d['z'] = 30",
+        "explanation": "You can add or update key-value pairs in a dictionary by assigning a value to a new or existing key using square bracket notation."
+    },
+    {
+        "id": "dictionaries_07",
+        "question": "What happens if you assign a value to an existing key in a dictionary, e.g., `d = {'a': 1}; d['a'] = 2`?",
+        "options": [
+            "It raises an error",
+            "The key 'a' will have both 1 and 2 as values",
+            "The value associated with 'a' will be updated to 2",
+            "A new key 'a' will be created with value 2"
+        ],
+        "correct_answer": "The value associated with 'a' will be updated to 2",
+        "explanation": "If a key already exists, assigning a new value to it will update the existing value, as dictionary keys must be unique."
+    },
+    {
+        "id": "dictionaries_08",
+        "question": "Which method removes an arbitrary key-value pair from a dictionary and returns it?",
+        "options": [
+            "pop()",
+            "remove()",
+            "popitem()",
+            "delete()"
+        ],
+        "correct_answer": "popitem()",
+        "explanation": "The `popitem()` method removes and returns a (key, value) pair from the dictionary. In Python 3.7+, it removes the last item inserted. In older versions, it was arbitrary."
+    },
+    {
+        "id": "dictionaries_09",
+        "question": "What is the primary difference between `dict.copy()` and assigning one dictionary to another (`new_dict = original_dict`)?",
+        "options": [
+            "`copy()` creates a shallow copy, assignment creates a deep copy",
+            "`copy()` creates a new object, assignment creates a reference",
+            "There is no difference, they are identical",
+            "`copy()` works only with empty dictionaries"
+        ],
+        "correct_answer": "`copy()` creates a new object, assignment creates a reference",
+        "explanation": "Assigning one dictionary to another (`new_dict = original_dict`) makes `new_dict` a reference to `original_dict`. `dict.copy()` creates a new dictionary object, but it's a shallow copy."
+    },
+    {
+        "id": "dictionaries_10",
+        "question": "What will be the result of `d1 = {'a': 1, 'b': 2}; d2 = {'b': 3, 'c': 4}; d1.update(d2); print(d1)`?",
+        "options": [
+            "{'a': 1, 'b': 2, 'c': 4}",
+            "{'a': 1, 'b': 3, 'c': 4}",
+            "{'b': 3, 'c': 4, 'a': 1}",
+            "{'a': 1, 'b': 2}"
+        ],
+        "correct_answer": "{'a': 1, 'b': 3, 'c': 4}",
+        "explanation": "The `update()` method adds items from `d2` to `d1`. If a key exists in both, the value from `d2` overwrites the value in `d1`."
+    },
+    {
+        "id": "dictionaries_11",
+        "question": "How do you check if a key exists in a dictionary `my_dict`?",
+        "options": [
+            "'key' in my_dict",
+            "my_dict.has_key('key')",
+            "my_dict.contains('key')",
+            "my_dict.exists('key')"
+        ],
+        "correct_answer": "'key' in my_dict",
+        "explanation": "The `in` operator is the standard and most Pythonic way to check for the presence of a key in a dictionary."
+    },
+    {
+        "id": "dictionaries_12",
+        "question": "Which method removes all items from a dictionary?",
+        "options": [
+            "delete()",
+            "clear()",
+            "remove_all()",
+            "empty()"
+        ],
+        "correct_answer": "clear()",
+        "explanation": "The `clear()` method removes all key-value pairs from the dictionary, making it empty."
+    },
+    {
+        "id": "dictionaries_13",
+        "question": "What does `d.items()` return for `d = {'a': 1, 'b': 2}`?",
+        "options": [
+            "A list of (key, value) tuples",
+            "A dictionary view object of (key, value) tuples",
+            "A string representation of items",
+            "An error"
+        ],
+        "correct_answer": "A dictionary view object of (key, value) tuples",
+        "explanation": "The `items()` method returns a dictionary view object that displays a list of a dictionary's key-value tuple pairs."
+    },
+    {
+        "id": "dictionaries_14",
+        "question": "Which of the following dictionary comprehensions correctly creates `{'A': 1, 'B': 2}` from `{'a': 1, 'b': 2}`?",
+        "options": [
+            "{k.upper(): v for k, v in d.items()}",
+            "{k: v for k, v in d.items().upper()}",
+            "{k.upper(), v for k, v in d.items()}",
+            "{k: v.upper() for k, v in d.items()}"
+        ],
+        "correct_answer": "{k.upper(): v for k, v in d.items()}",
+        "explanation": "This comprehension iterates through the items, converts the key to uppercase, and keeps the value as is, forming the new dictionary."
+    },
+    {
+        "id": "dictionaries_15",
+        "question": "Given `d = {'x': 1, 'y': 2, 'z': 3}`, what is the output of `d.pop('y')`?",
+        "options": [
+            "{'x': 1, 'z': 3}",
+            "2",
+            "KeyError",
+            "None"
+        ],
+        "correct_answer": "2",
+        "explanation": "The `pop()` method removes the specified key and returns its corresponding value. The dictionary `d` would then be `{'x': 1, 'z': 3}`."
+    },
+    {
+        "id": "dictionaries_16",
+        "question": "What is the result of `len({'a': 1, 'b': 2, 'a': 3})`?",
+        "options": [
+            "3",
+            "2",
+            "1",
+            "Error"
+        ],
+        "correct_answer": "2",
+        "explanation": "Dictionaries do not allow duplicate keys. When 'a': 3 is added, it overwrites 'a': 1. So the dictionary becomes `{'a': 3, 'b': 2}` and its length is 2."
+    },
+    {
+        "id": "dictionaries_17",
+        "question": "Which statement about dictionary values is true?",
+        "options": [
+            "They must be unique",
+            "They must be immutable",
+            "They can be of any data type",
+            "They must be strings or numbers"
+        ],
+        "correct_answer": "They can be of any data type",
+        "explanation": "Dictionary values can be of any data type (mutable or immutable), and they do not need to be unique. Only keys have restrictions."
+    },
+    {
+        "id": "dictionaries_18",
+        "question": "How can you iterate over both keys and values of a dictionary `my_dict` simultaneously?",
+        "options": [
+            "for key, value in my_dict:",
+            "for key, value in my_dict.items():",
+            "for key, value in my_dict.get_all():",
+            "for key, value in my_dict.pairs():"
+        ],
+        "correct_answer": "for key, value in my_dict.items():",
+        "explanation": "The `items()` method returns a view of the dictionary's key-value pairs, which can be easily unpacked in a `for` loop."
+    },
+    {
+        "id": "dictionaries_19",
+        "question": "Given `d = {'a': 1, 'b': 2, 'c': 3}`, what does `{k: v for k, v in d.items() if v > 1}` produce?",
+        "options": [
+            "{'a': 1, 'b': 2, 'c': 3}",
+            "{'b': 2, 'c': 3}",
+            "{'a': 1}",
+            "{} (empty dictionary)"
+        ],
+        "correct_answer": "{'b': 2, 'c': 3}",
+        "explanation": "The dictionary comprehension iterates through the items and includes only those pairs where the value `v` is greater than 1."
+    },
+    {
+        "id": "dictionaries_20",
+        "question": "What is the purpose of `dict.fromkeys(['k1', 'k2'], 0)`?",
+        "options": [
+            "To create a dictionary with keys 'k1', 'k2' and values 0, 0 respectively",
+            "To retrieve values for 'k1' and 'k2' from the dictionary",
+            "To convert a list of keys into a dictionary",
+            "To update existing keys 'k1', 'k2' to value 0"
+        ],
+        "correct_answer": "To create a dictionary with keys 'k1', 'k2' and values 0, 0 respectively",
+        "explanation": "The `fromkeys()` class method creates a new dictionary with keys from an iterable and values set to a specified default value (or `None` if not provided)."
+    },
+    {
+        "id": "dictionaries_01",
+        "question": "Which of the following is the correct way to create an empty dictionary in Python?",
+        "options": [
+            "{}",
+            "dict()",
+            "[]",
+            "Both A and B"
+        ],
+        "correct_answer": "Both A and B",
+        "explanation": "Both `{}` and `dict()` are valid ways to create an empty dictionary in Python."
+    },
+    {
+        "id": "dictionaries_02",
+        "question": "What will be the output of `my_dict['b']` given `my_dict = {'a': 1, 'b': 2, 'c': 3}`?",
+        "options": [
+            "1",
+            "2",
+            "3",
+            "KeyError"
+        ],
+        "correct_answer": "2",
+        "explanation": "Dictionary values are accessed using their corresponding keys. `my_dict['b']` retrieves the value associated with the key 'b', which is 2."
+    },
+    {
+        "id": "dictionaries_03",
+        "question": "Which statement is true regarding dictionary keys in Python?",
+        "options": [
+            "Keys must be strings.",
+            "Keys must be mutable objects.",
+            "Keys must be immutable objects.",
+            "Keys can be any Python object."
+        ],
+        "correct_answer": "Keys must be immutable objects.",
+        "explanation": "Dictionary keys must be immutable types like strings, numbers, or tuples. Mutable types like lists or dictionaries cannot be used as keys."
+    },
+    {
+        "id": "dictionaries_04",
+        "question": "What is the primary purpose of the `dict.get()` method?",
+        "options": [
+            "To retrieve a value by key, raising an error if the key is not found.",
+            "To retrieve a value by key, returning None or a specified default if the key is not found.",
+            "To add a new key-value pair to the dictionary.",
+            "To get a list of all keys in the dictionary."
+        ],
+        "correct_answer": "To retrieve a value by key, returning None or a specified default if the key is not found.",
+        "explanation": "The `get()` method provides a safe way to access dictionary values. If the key exists, it returns the value; otherwise, it returns `None` by default or a specified default value, preventing a `KeyError`."
+    },
+    {
+        "id": "dictionaries_05",
+        "question": "Given `d = {'x': 10, 'y': 20}`, what will `d.keys()` return?",
+        "options": [
+            "['x', 'y']",
+            "('x', 'y')",
+            "dict_keys(['x', 'y'])",
+            "{'x', 'y'}"
+        ],
+        "correct_answer": "dict_keys(['x', 'y'])",
+        "explanation": "The `keys()` method returns a view object that displays a list of all the keys in the dictionary."
+    },
+    {
+        "id": "dictionaries_06",
+        "question": "What does `d.values()` return for `d = {'a': 1, 'b': 2}`?",
+        "options": [
+            "['a', 'b']",
+            "[1, 2]",
+            "dict_values(['a', 'b'])",
+            "dict_values([1, 2])"
+        ],
+        "correct_answer": "dict_values([1, 2])",
+        "explanation": "The `values()` method returns a view object that displays a list of all the values in the dictionary."
+    },
+    {
+        "id": "dictionaries_07",
+        "question": "How do you add a new key-value pair to an existing dictionary `my_dict = {'name': 'Alice'}`?",
+        "options": [
+            "`my_dict.add('age', 30)`",
+            "`my_dict['age'] = 30`",
+            "`my_dict.insert('age', 30)`",
+            "`my_dict.append('age': 30)`"
+        ],
+        "correct_answer": "`my_dict['age'] = 30`",
+        "explanation": "New key-value pairs are added or existing values are updated by assigning a value to a key using square bracket notation."
+    },
+    {
+        "id": "dictionaries_08",
+        "question": "What is the output of `'banana' in my_dict` if `my_dict = {'apple': 1, 'banana': 2, 'cherry': 3}`?",
+        "options": [
+            "True",
+            "False",
+            "Error",
+            "2"
+        ],
+        "correct_answer": "True",
+        "explanation": "The `in` operator checks for the presence of a key in the dictionary. 'banana' is a key in `my_dict`, so it returns `True`."
+    },
+    {
+        "id": "dictionaries_09",
+        "question": "Which method is used to remove an arbitrary key-value pair from a dictionary and return it?",
+        "options": [
+            "`pop()`",
+            "`remove()`",
+            "`popitem()`",
+            "`delete()`"
+        ],
+        "correct_answer": "`popitem()`",
+        "explanation": "`popitem()` removes and returns a (key, value) pair from the dictionary. In Python 3.7+, it removes the last inserted item. `pop()` removes a specific key-value pair."
+    },
+    {
+        "id": "dictionaries_10",
+        "question": "What is the result of `d1.update(d2)` given `d1 = {'a': 1, 'b': 2}` and `d2 = {'b': 3, 'c': 4}`?",
+        "options": [
+            "`{'a': 1, 'b': 2, 'c': 4}`",
+            "`{'a': 1, 'b': 3, 'c': 4}`",
+            "`{'a': 1, 'c': 4}`",
+            "`{'b': 3, 'c': 4}`"
+        ],
+        "correct_answer": "`{'a': 1, 'b': 3, 'c': 4}`",
+        "explanation": "The `update()` method adds items from `d2` to `d1`. If a key exists in both, the value from `d2` overwrites the value in `d1`."
+    },
+    {
+        "id": "dictionaries_11",
+        "question": "Which of the following data types cannot be a value in a Python dictionary?",
+        "options": [
+            "List",
+            "Tuple",
+            "Integer",
+            "All of these can be values."
+        ],
+        "correct_answer": "All of these can be values.",
+        "explanation": "Dictionary values can be of any data type, including mutable types like lists, tuples, integers, other dictionaries, etc."
+    },
+    {
+        "id": "dictionaries_12",
+        "question": "What does the following dictionary comprehension create? `{x: x*2 for x in range(3)}`",
+        "options": [
+            "`{0: 0, 1: 2, 2: 4}`",
+            "`{0: 0, 1: 1, 2: 2}`",
+            "`[0, 2, 4]`",
+            "`{0: 0, 1: 2, 2: 4, 3: 6}`"
+        ],
+        "correct_answer": "`{0: 0, 1: 2, 2: 4}`",
+        "explanation": "The comprehension iterates `x` from 0 to 2 (exclusive). For each `x`, it creates a key `x` and a value `x*2`."
+    },
+    {
+        "id": "dictionaries_13",
+        "question": "Which method is used to get a list of (key, value) tuples from a dictionary?",
+        "options": [
+            "`keys()`",
+            "`values()`",
+            "`items()`",
+            "`get_all()`"
+        ],
+        "correct_answer": "`items()`",
+        "explanation": "The `items()` method returns a view object that displays a list of a dictionary's key-value tuple pairs."
+    },
+    {
+        "id": "dictionaries_14",
+        "question": "What happens if you try to access a non-existent key using square bracket notation (e.g., `my_dict['non_existent_key']`)?",
+        "options": [
+            "Returns `None`",
+            "Returns an empty string",
+            "Raises a `KeyError`",
+            "Adds the key with a `None` value"
+        ],
+        "correct_answer": "Raises a `KeyError`",
+        "explanation": "Accessing a non-existent key with `[]` will result in a `KeyError`. Use `get()` to avoid this."
+    },
+    {
+        "id": "dictionaries_15",
+        "question": "How can you remove the key 'b' and its value from `my_dict = {'a': 1, 'b': 2, 'c': 3}`?",
+        "options": [
+            "`del my_dict['b']`",
+            "`my_dict.remove('b')`",
+            "`my_dict.delete('b')`",
+            "`my_dict.popitem('b')`"
+        ],
+        "correct_answer": "`del my_dict['b']`",
+        "explanation": "The `del` keyword is used to delete a specific key-value pair from a dictionary. `pop('b')` would also work and return the value."
+    },
+    {
+        "id": "dictionaries_16",
+        "question": "What is the output of `len(my_dict)` if `my_dict = {'x': 1, 'y': 2, 'z': 3}`?",
+        "options": [
+            "1",
+            "3",
+            "6",
+            "Error"
+        ],
+        "correct_answer": "3",
+        "explanation": "The `len()` function returns the number of key-value pairs (items) in the dictionary."
+    },
+    {
+        "id": "dictionaries_17",
+        "question": "Consider `d1 = {'a': 1}` and `d2 = d1.copy()`. If `d1['a'] = 100`, what are the values of `d1` and `d2`?",
+        "options": [
+            "`d1` is `{'a': 100}`, `d2` is `{'a': 100}`",
+            "`d1` is `{'a': 100}`, `d2` is `{'a': 1}`",
+            "`d1` is `{'a': 1}`, `d2` is `{'a': 100}`",
+            "Error"
+        ],
+        "correct_answer": "`d1` is `{'a': 100}`, `d2` is `{'a': 1}`",
+        "explanation": "The `copy()` method creates a shallow copy. Changes to `d1` after the copy do not affect `d2` for top-level keys."
+    },
+    {
+        "id": "dictionaries_18",
+        "question": "What does this dictionary comprehension produce? `{k: 'even' if k % 2 == 0 else 'odd' for k in range(1, 6)}`",
+        "options": [
+            "`{1: 'odd', 2: 'even', 3: 'odd', 4: 'even', 5: 'odd'}`",
+            "`{1: 'odd', 2: 'even', 3: 'odd', 4: 'even'}`",
+            "`{'even': [2, 4], 'odd': [1, 3, 5]}`",
+            "`[1, 'odd', 2, 'even', 3, 'odd', 4, 'even', 5, 'odd']`"
+        ],
+        "correct_answer": "`{1: 'odd', 2: 'even', 3: 'odd', 4: 'even', 5: 'odd'}`",
+        "explanation": "It iterates `k` from 1 to 5. For each `k`, it checks if it's even or odd and assigns the corresponding string as its value."
+    },
+    {
+        "id": "dictionaries_19",
+        "question": "Which of the following methods removes all items from a dictionary?",
+        "options": [
+            "`delete_all()`",
+            "`clear()`",
+            "`remove_all()`",
+            "`empty()`"
+        ],
+        "correct_answer": "`clear()`",
+        "explanation": "The `clear()` method empties the dictionary, removing all key-value pairs."
+    },
+    {
+        "id": "dictionaries_20",
+        "question": "Given `data = {'user': {'name': 'John', 'age': 30}}`, how would you access John's age?",
+        "options": [
+            "`data['age']`",
+            "`data['user']['age']`",
+            "`data.user.age`",
+            "`data.get('user', 'age')`"
+        ],
+        "correct_answer": "`data['user']['age']`",
+        "explanation": "This is a nested dictionary. To access the age, you first access the 'user' dictionary, then the 'age' key within it."
+    }
+]

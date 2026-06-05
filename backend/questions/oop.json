@@ -1,0 +1,482 @@
+[
+    {
+        "id": "oop_0",
+        "question": "What keyword is used to define a class in Python?",
+        "options": [
+            "class",
+            "define",
+            "Class",
+            "struct"
+        ],
+        "correct_answer": "class",
+        "explanation": "The 'class' keyword is used to create a class in Python."
+    },
+    {
+        "id": "oop_1",
+        "question": "How do you create an object (instance) of a class named 'MyClass' in Python?",
+        "options": [
+            "MyClass.new()",
+            "object MyClass()",
+            "MyClass()",
+            "new MyClass"
+        ],
+        "correct_answer": "MyClass()",
+        "explanation": "Objects are created by calling the class name as if it were a function."
+    },
+    {
+        "id": "oop_2",
+        "question": "What is the purpose of the `self` parameter in Python class methods?",
+        "options": [
+            "It refers to the superclass",
+            "It is a keyword for private attributes",
+            "It refers to the instance of the class",
+            "It is used to define static methods"
+        ],
+        "correct_answer": "It refers to the instance of the class",
+        "explanation": "'self' is a convention to refer to the instance of the class within its methods, allowing access to its attributes and methods."
+    },
+    {
+        "id": "oop_3",
+        "question": "Which special method is automatically called when a new object is created from a class?",
+        "options": [
+            "__new__",
+            "__call__",
+            "__init__",
+            "__create__"
+        ],
+        "correct_answer": "__init__",
+        "explanation": "The `__init__` method is the constructor in Python, used to initialize the object's attributes."
+    },
+    {
+        "id": "oop_4",
+        "question": "How do you define an instance attribute `name` with an initial value of \"Alice\" inside the `__init__` method of a class?",
+        "options": [
+            "self.name = \"Alice\"",
+            "name = \"Alice\"",
+            "instance.name = \"Alice\"",
+            "@name = \"Alice\""
+        ],
+        "correct_answer": "self.name = \"Alice\"",
+        "explanation": "Instance attributes are defined using `self.` followed by the attribute name within methods, typically `__init__`."
+    },
+    {
+        "id": "oop_5",
+        "question": "Which of the following statements about class attributes is true?",
+        "options": [
+            "They are unique to each instance of the class",
+            "They are defined inside methods using `self`",
+            "They are shared by all instances of the class",
+            "They can only be accessed by static methods"
+        ],
+        "correct_answer": "They are shared by all instances of the class",
+        "explanation": "Class attributes are defined directly within the class body (outside any method) and are shared across all instances."
+    },
+    {
+        "id": "oop_6",
+        "question": "If `Dog` is a subclass of `Animal`, what is the correct way to define `Dog`?",
+        "options": [
+            "class Dog inherits Animal:",
+            "class Dog(Animal):",
+            "class Dog is Animal:",
+            "class Dog extends Animal:"
+        ],
+        "correct_answer": "class Dog(Animal):",
+        "explanation": "In Python, inheritance is indicated by placing the parent class name in parentheses after the child class name."
+    },
+    {
+        "id": "oop_7",
+        "question": "What happens when a subclass defines a method with the same name as a method in its superclass?",
+        "options": [
+            "It causes a compilation error",
+            "The superclass method is deleted",
+            "The subclass method overrides the superclass method",
+            "Both methods are available, but the superclass method is preferred"
+        ],
+        "correct_answer": "The subclass method overrides the superclass method",
+        "explanation": "Method overriding allows a subclass to provide a specific implementation of a method that is already defined in its superclass."
+    },
+    {
+        "id": "oop_8",
+        "question": "How can a subclass explicitly call a method from its immediate superclass?",
+        "options": [
+            "super().method_name()",
+            "self.super.method_name()",
+            "parent.method_name()",
+            "super(ClassName, self).method_name() (or super().method_name() in Python 3)"
+        ],
+        "correct_answer": "super().method_name()",
+        "explanation": "The `super()` function is used to access methods of the parent class. In Python 3, `super().method_name()` is the common syntax."
+    },
+    {
+        "id": "oop_9",
+        "question": "Which OOP principle allows objects of different classes to be treated as objects of a common type?",
+        "options": [
+            "Encapsulation",
+            "Abstraction",
+            "Inheritance",
+            "Polymorphism"
+        ],
+        "correct_answer": "Polymorphism",
+        "explanation": "Polymorphism means 'many forms' and allows objects of different classes to respond to the same method call in their own specific ways."
+    },
+    {
+        "id": "oop_10",
+        "question": "What is \"Duck Typing\" in Python?",
+        "options": [
+            "A type of polymorphism where an object's suitability is determined by its methods and properties, not by its explicit type.",
+            "A design pattern for creating singletons.",
+            "A way to enforce strict type checking at runtime.",
+            "A method for dynamically generating class definitions."
+        ],
+        "correct_answer": "A type of polymorphism where an object's suitability is determined by its methods and properties, not by its explicit type.",
+        "explanation": "\"If it walks like a duck and quacks like a duck, then it is a duck.\" Python focuses on what an object can do rather than what it is."
+    },
+    {
+        "id": "oop_11",
+        "question": "How does Python typically indicate that an attribute or method is intended for internal use (often referred to as \"private\")?",
+        "options": [
+            "Using the `private` keyword",
+            "Using a single leading underscore (e.g., `_attribute`)",
+            "Using two leading underscores (e.g., `__attribute`)",
+            "It is not possible to mark attributes as private in Python"
+        ],
+        "correct_answer": "Using a single leading underscore (e.g., `_attribute`)",
+        "explanation": "A single leading underscore (`_`) is a convention to suggest that an attribute or method is non-public and should not be accessed directly from outside the class."
+    },
+    {
+        "id": "oop_12",
+        "question": "What is the effect of using two leading underscores (e.g., `__attribute`) for an attribute in a Python class?",
+        "options": [
+            "It makes the attribute truly private and inaccessible",
+            "It prevents the attribute from being inherited by subclasses",
+            "It triggers name mangling to make the attribute harder to access directly from outside the class",
+            "It makes the attribute a class-level constant"
+        ],
+        "correct_answer": "It triggers name mangling to make the attribute harder to access directly from outside the class",
+        "explanation": "Two leading underscores cause name mangling, where the interpreter renames the attribute to `_ClassName__attribute`, making it harder to access from outside, primarily to avoid naming conflicts in inheritance."
+    },
+    {
+        "id": "oop_13",
+        "question": "Which decorator is used to define a class method in Python?",
+        "options": [
+            "@staticmethod",
+            "@classmethod",
+            "@property",
+            "@abstractmethod"
+        ],
+        "correct_answer": "@classmethod",
+        "explanation": "The `@classmethod` decorator is used to define a method that receives the class itself as its first argument (conventionally `cls`), rather than the instance."
+    },
+    {
+        "id": "oop_14",
+        "question": "Which decorator is used to define a static method in Python?",
+        "options": [
+            "@classmethod",
+            "@staticmethod",
+            "@instance_method",
+            "@noglobals"
+        ],
+        "correct_answer": "@staticmethod",
+        "explanation": "The `@staticmethod` decorator is used for methods that belong to the class but do not operate on the instance or the class itself. They behave like regular functions but are part of the class namespace."
+    },
+    {
+        "id": "oop_15",
+        "question": "What is the term for a class inheriting from more than one parent class in Python?",
+        "options": [
+            "Hierarchical inheritance",
+            "Multilevel inheritance",
+            "Multiple inheritance",
+            "Hybrid inheritance"
+        ],
+        "correct_answer": "Multiple inheritance",
+        "explanation": "Multiple inheritance is when a class derives from multiple base classes, inheriting attributes and methods from all of them."
+    },
+    {
+        "id": "oop_16",
+        "question": "In Python's multiple inheritance, how is the order in which base classes are searched for methods determined?",
+        "options": [
+            "Randomly",
+            "Based on their alphabetical order",
+            "By the Method Resolution Order (MRO), which uses the C3 linearization algorithm",
+            "By the order in which they are defined in the class body"
+        ],
+        "correct_answer": "By the Method Resolution Order (MRO), which uses the C3 linearization algorithm",
+        "explanation": "Python uses the C3 linearization algorithm to determine the MRO, which defines the search path for methods and attributes in a complex inheritance hierarchy."
+    },
+    {
+        "id": "oop_17",
+        "question": "To define an abstract method in Python, which module and decorator are typically used?",
+        "options": [
+            "abc module and @abstractmethod decorator",
+            "os module and @abstract decorator",
+            "sys module and @interface decorator",
+            "math module and @virtualmethod decorator"
+        ],
+        "correct_answer": "abc module and @abstractmethod decorator",
+        "explanation": "The `abc` (Abstract Base Classes) module provides the infrastructure for defining abstract base classes in Python, and the `@abstractmethod` decorator marks methods as abstract."
+    },
+    {
+        "id": "oop_18",
+        "question": "Which special method is called by the `str()` built-in function and by the `print()` function to get a string representation of an object?",
+        "options": [
+            "__repr__",
+            "__str__",
+            "__format__",
+            "__display__"
+        ],
+        "correct_answer": "__str__",
+        "explanation": "The `__str__` method provides a human-readable, informal string representation of an object, typically used by `print()` and `str()`."
+    },
+    {
+        "id": "oop_19",
+        "question": "Which OOP concept binds data (attributes) and methods that operate on the data into a single unit (a class), and restricts direct access to some of the object's components?",
+        "options": [
+            "Polymorphism",
+            "Inheritance",
+            "Encapsulation",
+            "Abstraction"
+        ],
+        "correct_answer": "Encapsulation",
+        "explanation": "Encapsulation is the bundling of data with the methods that operate on that data, and restricting direct access to some of an object's components."
+    },
+    {
+        "id": "oop_01",
+        "question": "Which of the following is used to create an instance of a class in Python?",
+        "options": [
+            "class MyClass()",
+            "new MyClass",
+            "MyClass()",
+            "create MyClass"
+        ],
+        "correct_answer": "MyClass()",
+        "explanation": "To create an instance (object) of a class in Python, you call the class name followed by parentheses, similar to calling a function."
+    },
+    {
+        "id": "oop_02",
+        "question": "What is the purpose of the `__init__` method in a Python class?",
+        "options": [
+            "To define class variables",
+            "To initialize instance attributes when an object is created",
+            "To destroy an object when it's no longer needed",
+            "To define static methods"
+        ],
+        "correct_answer": "To initialize instance attributes when an object is created",
+        "explanation": "The `__init__` method is a special method called a constructor. It's automatically invoked when a new object is created from a class, allowing you to set up the initial state of the object's attributes."
+    },
+    {
+        "id": "oop_03",
+        "question": "In Python, what keyword is used to define a class?",
+        "options": [
+            "def",
+            "class",
+            "object",
+            "type"
+        ],
+        "correct_answer": "class",
+        "explanation": "The `class` keyword is used to define a new class in Python, followed by the class name and a colon."
+    },
+    {
+        "id": "oop_04",
+        "question": "Which of these describes a class variable?",
+        "options": [
+            "A variable defined inside a method",
+            "A variable that belongs to a specific instance of a class",
+            "A variable that is shared by all instances of a class",
+            "A variable that is only accessible from outside the class"
+        ],
+        "correct_answer": "A variable that is shared by all instances of a class",
+        "explanation": "Class variables are defined directly inside the class but outside any methods. They are shared among all instances of that class."
+    },
+    {
+        "id": "oop_05",
+        "question": "What is 'self' referring to in a Python instance method?",
+        "options": [
+            "The class itself",
+            "The current instance of the class",
+            "A global variable",
+            "A superclass object"
+        ],
+        "correct_answer": "The current instance of the class",
+        "explanation": "In Python instance methods, `self` is a convention (not a keyword) that refers to the instance of the class on which the method was called, allowing access to its attributes and other methods."
+    },
+    {
+        "id": "oop_06",
+        "question": "How do you define a 'private' attribute in Python (by convention)?",
+        "options": [
+            "Using the `private` keyword",
+            "Prefixing the attribute name with a single underscore (`_`)",
+            "Prefixing the attribute name with two leading underscores (`__`)",
+            "Using the `protected` keyword"
+        ],
+        "correct_answer": "Prefixing the attribute name with two leading underscores (`__`)",
+        "explanation": "In Python, prefixing an attribute name with two leading underscores (`__`) invokes name mangling, making it harder (but not impossible) to access directly from outside the class, thus acting as a strong convention for 'private'."
+    },
+    {
+        "id": "oop_07",
+        "question": "Which concept allows a new class to inherit properties and methods from an existing class?",
+        "options": [
+            "Encapsulation",
+            "Polymorphism",
+            "Abstraction",
+            "Inheritance"
+        ],
+        "correct_answer": "Inheritance",
+        "explanation": "Inheritance is an OOP principle where a new class (subclass/derived class) can acquire attributes and behaviors from an existing class (superclass/base class)."
+    },
+    {
+        "id": "oop_08",
+        "question": "What is the primary benefit of using `super()` in inheritance?",
+        "options": [
+            "To call methods from a sibling class",
+            "To directly access attributes of the parent class without calling its methods",
+            "To call a method or access an attribute from the parent or ancestor class",
+            "To define a new class variable"
+        ],
+        "correct_answer": "To call a method or access an attribute from the parent or ancestor class",
+        "explanation": "`super()` provides a way to refer to the parent class without explicitly naming it, especially useful for calling overridden methods or `__init__` methods of the parent class in a robust way, particularly in multiple inheritance scenarios."
+    },
+    {
+        "id": "oop_09",
+        "question": "What happens when a subclass defines a method with the same name as a method in its superclass?",
+        "options": [
+            "It causes an error",
+            "The superclass method is automatically called",
+            "The subclass method overrides the superclass method",
+            "Both methods are executed sequentially"
+        ],
+        "correct_answer": "The subclass method overrides the superclass method",
+        "explanation": "This is known as method overriding. When an instance of the subclass calls that method, the subclass's implementation is executed instead of the superclass's."
+    },
+    {
+        "id": "oop_10",
+        "question": "Which of the following is true about multiple inheritance in Python?",
+        "options": [
+            "Python does not support multiple inheritance",
+            "Python supports multiple inheritance, but it's generally discouraged due to complexity",
+            "Python supports multiple inheritance without any known issues or complexities",
+            "Multiple inheritance is only allowed for abstract classes"
+        ],
+        "correct_answer": "Python supports multiple inheritance, but it's generally discouraged due to complexity",
+        "explanation": "Python fully supports multiple inheritance, allowing a class to inherit from multiple base classes. However, it can introduce complexities like the 'diamond problem' and make the Method Resolution Order (MRO) harder to understand, leading to it being often discouraged in favor of composition."
+    },
+    {
+        "id": "oop_11",
+        "question": "What is the Method Resolution Order (MRO) in Python?",
+        "options": [
+            "The order in which methods are defined in a class",
+            "The order in which a method in a class can be accessed by its instances",
+            "The order in which Python searches for a method in a hierarchy of classes during inheritance",
+            "The order of arguments passed to a method"
+        ],
+        "correct_answer": "The order in which Python searches for a method in a hierarchy of classes during inheritance",
+        "explanation": "MRO defines the order in which base classes are searched when looking for a method or attribute. In Python 3, it follows the C3 linearization algorithm, which can be viewed using `ClassName.__mro__` or `help(ClassName)`."
+    },
+    {
+        "id": "oop_12",
+        "question": "Which built-in function checks if an object is an instance of a specified class or a subclass thereof?",
+        "options": [
+            "isinstance()",
+            "issubclass()",
+            "type()",
+            "hasattr()"
+        ],
+        "correct_answer": "isinstance()",
+        "explanation": "`isinstance(obj, Class)` returns `True` if `obj` is an instance of `Class` or an instance of a class derived from `Class`."
+    },
+    {
+        "id": "oop_13",
+        "question": "Which of the following best describes polymorphism in OOP?",
+        "options": [
+            "The ability of an object to take on many forms",
+            "The ability to hide the internal implementation details of an object",
+            "The ability to create new classes from existing classes",
+            "The ability to restrict access to certain object attributes"
+        ],
+        "correct_answer": "The ability of an object to take on many forms",
+        "explanation": "Polymorphism, meaning 'many forms', allows objects of different classes to be treated as objects of a common type, or for methods with the same name to behave differently based on the object calling them (e.g., method overriding, duck typing)."
+    },
+    {
+        "id": "oop_14",
+        "question": "Python primarily supports polymorphism through which concept?",
+        "options": [
+            "Method Overloading",
+            "Duck Typing",
+            "Strict Type Checking",
+            "Abstract Methods only"
+        ],
+        "correct_answer": "Duck Typing",
+        "explanation": "Python's dynamic typing and 'duck typing' ('If it walks like a duck and quacks like a duck, then it must be a duck') are its primary mechanisms for polymorphism. It focuses on what an object can do rather than what type it is."
+    },
+    {
+        "id": "oop_15",
+        "question": "Which of the following is an example of operator overloading in Python?",
+        "options": [
+            "Defining a method named `add()`",
+            "Using the `+` operator to concatenate two strings",
+            "Creating a new class called `Operator`",
+            "Using `*args` in a function definition"
+        ],
+        "correct_answer": "Using the `+` operator to concatenate two strings",
+        "explanation": "Operator overloading allows standard operators (like `+`, `-`, `*`) to have different meanings depending on the context (i.e., the data types of the operands). Python achieves this through special methods like `__add__` for `+`."
+    },
+    {
+        "id": "oop_16",
+        "question": "What is the main difference between `__str__` and `__repr__` methods?",
+        "options": [
+            "`__str__` is for debugging, `__repr__` is for end-user display.",
+            "`__str__` returns a formal representation, `__repr__` returns an informal one.",
+            "`__str__` is for end-user display, `__repr__` is for unambiguous representation (often for debugging).",
+            "There is no functional difference; they are interchangeable."
+        ],
+        "correct_answer": "`__str__` is for end-user display, `__repr__` is for unambiguous representation (often for debugging).",
+        "explanation": "`__str__` is called by `str()` and `print()`, providing a human-readable string. `__repr__` is called by `repr()` and in interactive shells, providing an unambiguous string representation, ideally one that could recreate the object."
+    },
+    {
+        "id": "oop_17",
+        "question": "To make a class an abstract base class (ABC) in Python, which module is typically used?",
+        "options": [
+            "`collections`",
+            "`types`",
+            "`abc`",
+            "`os`"
+        ],
+        "correct_answer": "`abc`",
+        "explanation": "The `abc` (Abstract Base Classes) module provides the infrastructure for defining ABCs in Python. You typically inherit from `ABC` and use the `@abstractmethod` decorator."
+    },
+    {
+        "id": "oop_18",
+        "question": "Which decorator is used to define a method that belongs to the class itself, rather than an instance of the class?",
+        "options": [
+            "@staticmethod",
+            "@classmethod",
+            "@property",
+            "@abstractmethod"
+        ],
+        "correct_answer": "@classmethod",
+        "explanation": "The `@classmethod` decorator defines a method that receives the class itself as its first argument (conventionally named `cls`), rather than an instance. It can access and modify class-specific state."
+    },
+    {
+        "id": "oop_19",
+        "question": "What is the purpose of the `@property` decorator in Python?",
+        "options": [
+            "To define a static method",
+            "To make a method callable without parentheses like an attribute, allowing getter/setter functionality",
+            "To define a class variable",
+            "To mark a method as private"
+        ],
+        "correct_answer": "To make a method callable without parentheses like an attribute, allowing getter/setter functionality",
+        "explanation": "The `@property` decorator allows you to define methods that can be accessed like attributes, providing a Pythonic way to implement getters, setters, and deleters for attributes without breaking the client code that expects direct attribute access."
+    },
+    {
+        "id": "oop_20",
+        "question": "Which of the following is NOT a core principle of Object-Oriented Programming?",
+        "options": [
+            "Inheritance",
+            "Polymorphism",
+            "Encapsulation",
+            "Functional Programming"
+        ],
+        "correct_answer": "Functional Programming",
+        "explanation": "Inheritance, Polymorphism, and Encapsulation (often alongside Abstraction) are the four pillars of Object-Oriented Programming. Functional Programming is a different programming paradigm."
+    }
+]
